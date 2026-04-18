@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{.Site.Title}}</title>
+  {{if .Site.URL}}<link rel="canonical" href="{{.Site.URL}}{{.Page.URL}}">{{end}}
+  <link rel="stylesheet" href="/assets/braised.css">
+  <script defer src="/assets/blocks.js"></script>
+  <script>
+    (function() {
+      var stored = localStorage.getItem('braised-theme');
+      {{if .Site.Themes.Default -}}
+      var preferred = '{{.Site.Themes.Default}}';
+      {{- else -}}
+      var preferred = 'light';
+      {{- end}}
+      document.documentElement.dataset.theme = stored || preferred;
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════ TOP NAV -->
+<header class="topnav">
+  <div class="topnav-identity">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="topnav-name">{{.Site.Title}}</a>
+  </div>
+
+  <nav>
+    <ul class="topnav-links">
+      <li>
+        <button>Projects <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <span class="dropdown-item-label">Active</span>
+          <a href="/projects/braised/" class="dropdown-item">Braised — site generator</a>
+          <a href="/projects/postgres/" class="dropdown-item">PostgreSQL learning path</a>
+        </div>
+      </li>
+      <li><a href="#">Experimental Exposure</a></li>
+      <li><a href="{{index .Site.Meta "github_url"}}">Git</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav-right">
+    <a href="{{index .Site.Meta "cta_url"}}" class="topnav-cta">
+      {{index .Site.Meta "cta_label"}}
+    </a>
+
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false">
+        <span class="tb-dot"></span>
+        <span id="themeBtnLabel">Light</span>
+        <span class="tb-chevron">▾</span>
+      </button>
+      <div class="theme-menu" id="themeMenu" role="menu">
+        <span class="theme-menu-label">Color theme</span>
+          {{if .Site.Themes.Values}}
+          {{range .Site.Themes.Values}}
+          <button class="theme-opt" data-theme="{{.}}" role="menuitem">
+            <span class="theme-opt-swatch"></span>
+            {{.}}
+          </button>
+          {{end}}
+          {{else}}
+          <button class="theme-opt" data-theme="light" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#f7f1e6"></span>
+            Light
+          </button>
+          <button class="theme-opt" data-theme="neutral" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#e8e4dd"></span>
+            Neutral
+          </button>
+          <button class="theme-opt" data-theme="dark" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#1e1b16; border-color:rgba(255,255,255,0.18)"></span>
+            Dark
+          </button>
+          {{end}}
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════ PAGE SHELL -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="page-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    {{if .Nav}}
+    <ul>{{template "navTree" .Nav.Roots}}</ul>
+    {{end}}
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <article class="page-body">
+      {{if .Page.Title}}<h1 class="page-title">{{.Page.Title}}</h1>{{end}}
+      <div class="page-prose">
+        {{.Page.Content}}
+      </div>
+    </article>
+
+    <footer class="site-footer">
+      <span class="footer-copy">&copy; 2026 {{.Site.Title}}</span>
+      <ul class="footer-links">
+        <li><a href="{{index .Site.Meta "github_url"}}">GitHub</a></li>
+        <li><a href="{{index .Site.Meta "linkedin_url"}}">LinkedIn</a></li>
+        <li><a href="/rss.xml">RSS</a></li>
+      </ul>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root    = document.documentElement;
+    var btn     = document.getElementById('themeBtn');
+    var label   = document.getElementById('themeBtnLabel');
+    var menu    = document.getElementById('themeMenu');
+    var opts    = menu.querySelectorAll('.theme-opt');
+
+    // ── Theme switcher ──────────────────────────────────────────────────────
+    function setTheme(key) {
+      root.setAttribute('data-theme', key);
+      label.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+      opts.forEach(function(o) {
+        o.classList.toggle('active', o.dataset.theme === key);
+      });
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('open');
+      try { localStorage.setItem('braised-theme', key); } catch(e) {}
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    opts.forEach(function(opt) {
+      opt.addEventListener('click', function() { setTheme(opt.dataset.theme); });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#themeSwitcher')) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var current = root.getAttribute('data-theme') || 'light';
+    label.textContent = current.charAt(0).toUpperCase() + current.slice(1);
+    opts.forEach(function(o) {
+      o.classList.toggle('active', o.dataset.theme === current);
+    });
+
+    // ── Sidebar toggle ──────────────────────────────────────────────────────
+    var navToggle = document.getElementById('navToggle');
+    var sidebar   = document.getElementById('sidebar');
+    var overlay   = document.getElementById('navOverlay');
+
+    function openNav() {
+      sidebar.classList.add('is-open');
+      overlay.classList.add('is-visible');
+      navToggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeNav() {
+      sidebar.classList.remove('is-open');
+      overlay.classList.remove('is-visible');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    navToggle.addEventListener('click', function() {
+      sidebar.classList.contains('is-open') ? closeNav() : openNav();
+    });
+    overlay.addEventListener('click', closeNav);
+  })();
+</script>
+
+</body>
+</html>

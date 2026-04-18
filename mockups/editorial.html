@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravind Kumar — Editorial Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  /*
+    My pick: Warm Editorial
+    ─────────────────────────────────────────────────────────────────────────────
+    Rationale: A documentation/curriculum engineer is someone who lives at the
+    intersection of technical craft and communication craft. Neither a cold
+    developer-tool site, nor a generic personal blog.
+
+    This theme borrows from print editorial design — quality magazines, well-made
+    books. Warm off-white pages, deep charcoal ink, a single restrained accent
+    (terracotta). Generous whitespace. Serif body, Sans UI. The visual language
+    says "I think carefully about how things are presented."
+
+    Borders are present but warm and deliberate — not invisible (ultralight) or
+    hard (ultramodern). They frame rather than divide.
+    ─────────────────────────────────────────────────────────────────────────────
+  */
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:         #f8f5f0;
+    --bg-subtle:  #f1ece5;
+    --bg-card:    #faf8f4;
+    --bg-hover:   #ede7de;
+    --border:     #ddd5c8;
+    --border-str: #c9bfb0;
+    --text:       #1e1a14;
+    --text-mid:   #5a5045;
+    --text-muted: #9b8f82;
+    --accent:     #b85c38;
+    --accent-lt:  #d46f4a;
+    --accent-sub: rgba(184,92,56,0.08);
+    --accent-brd: rgba(184,92,56,0.25);
+    --accent-txt: #8c3f22;
+    --font-sans:  'IBM Plex Sans', sans-serif;
+    --font-serif: 'IBM Plex Serif', Georgia, serif;
+    --font-mono:  'IBM Plex Mono', monospace;
+  }
+
+  html { font-size: 16px; }
+  body {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+  }
+
+  /* ── Nav ── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  .site-name {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    list-style: none;
+  }
+  .site-nav a {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .site-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .site-nav a:hover { color: var(--text); }
+  .site-nav a:hover::after { transform: scaleX(1); }
+  .site-nav a.active {
+    color: var(--accent-txt);
+    font-weight: 500;
+  }
+  .site-nav a.active::after { transform: scaleX(1); }
+
+  /* ── Hero — two-column on wide ── */
+  .hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5.5rem 2.5rem 4.5rem;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1px;
+    gap: 0 4rem;
+    position: relative;
+  }
+  .hero-body { max-width: 600px; }
+  .hero-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: 2.875rem;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-txt);
+  }
+  .hero-bio {
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .hero-links {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .btn-primary {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent-txt);
+    text-decoration: none;
+    padding: 0.5625rem 1.25rem;
+    border: 1px solid var(--accent-brd);
+    border-radius: 3px;
+    background: var(--accent-sub);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn-primary:hover {
+    background: rgba(184,92,56,0.14);
+    border-color: rgba(184,92,56,0.4);
+    color: var(--accent);
+  }
+  .btn-ghost {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+  }
+  .btn-ghost:hover { color: var(--text-mid); border-color: var(--text-mid); }
+
+  /* ── Main ── */
+  .main-content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 3.5rem 0 1.5rem;
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 0;
+  }
+  .section-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .section-all {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    color: var(--accent-txt);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+    padding-bottom: 1px;
+  }
+  .section-all:hover { border-color: var(--accent-txt); }
+
+  /* ── Blog posts — editorial list layout ── */
+  .post-list { list-style: none; }
+  .post-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.75rem 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 2rem;
+    align-items: start;
+  }
+  .post-date-col {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding-top: 0.25rem;
+    white-space: nowrap;
+    width: 72px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+  .post-date-month {
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.625rem;
+    color: var(--accent);
+  }
+  .post-date-day {
+    display: block;
+    font-size: 1.625rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.1;
+    margin: 0.1rem 0;
+  }
+  .post-date-year {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.6875rem;
+  }
+  .post-body { display: flex; flex-direction: column; gap: 0.5rem; }
+  .post-title {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.35;
+    transition: color 0.2s;
+    display: inline;
+    background-image: linear-gradient(var(--accent-brd), var(--accent-brd));
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease, color 0.2s;
+  }
+  .post-title:hover {
+    color: var(--accent-txt);
+    background-size: 100% 1px;
+  }
+  .post-desc {
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    color: var(--text-mid);
+    line-height: 1.65;
+  }
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .tag {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  /* ── Work — asymmetric layout ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1.5rem 0 4rem;
+  }
+  .work-card {
+    background: var(--bg-card);
+    padding: 1.625rem 1.75rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .work-card:last-child { border-bottom: none; }
+  .work-card.featured {
+    grid-row: span 2;
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+    justify-content: flex-end;
+    padding: 2rem 1.75rem;
+    background-color: var(--bg-subtle);
+  }
+  .work-card:hover { background: var(--bg-hover); }
+  .work-card-label {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .work-card-title {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .work-card.featured .work-card-title {
+    font-size: 1.375rem;
+    margin-bottom: 0.25rem;
+  }
+  .work-card:not(.featured) .work-card-title { font-size: 0.9375rem; }
+  .work-card-desc {
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    color: var(--text-mid);
+    line-height: 1.65;
+    flex: 1;
+  }
+  .work-card:not(.featured) .work-card-desc { font-size: 0.875rem; }
+  .work-card-link {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    color: var(--accent-txt);
+    margin-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--accent-brd);
+    padding-bottom: 1px;
+    width: fit-content;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .work-card:hover .work-card-link {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    border-top: 2px solid var(--text);
+    margin-top: 2rem;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-copy {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+  }
+  .footer-links a {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--text-mid); }
+
+  /* ── Label ── */
+  .mockup-label {
+    position: fixed;
+    bottom: 1rem; right: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-str);
+    padding: 0.25rem 0.625rem;
+    border-radius: 2px;
+    z-index: 200;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#" class="site-name">Ravind Kumar</a>
+  <nav>
+    <ul class="site-nav">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Braised Docs</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-body">
+    <p class="hero-eyebrow">Documentation &amp; Curriculum Engineer</p>
+    <h1>Writing that <em>closes the gap</em> between people and systems.</h1>
+    <p class="hero-bio">
+      I've been writing technical documentation since 2012 — finding the seam between
+      engineering and communication, and making that seam invisible to the reader.
+      Currently: building Braised, a documentation-first site generator.
+    </p>
+    <div class="hero-links">
+      <a href="#" class="btn-primary">See my work →</a>
+      <a href="#" class="btn-ghost">Read the blog</a>
+    </div>
+  </div>
+</section>
+
+<main class="main-content">
+
+  <div class="section-header">
+    <span class="section-label">Recent writing</span>
+    <a href="#" class="section-all">All posts →</a>
+  </div>
+
+  <ul class="post-list">
+    <li class="post-item">
+      <div class="post-date-col">
+        <span class="post-date-month">Apr</span>
+        <span class="post-date-day">11</span>
+        <span class="post-date-year">2026</span>
+      </div>
+      <div class="post-body">
+        <a href="#" class="post-title">What I learned shipping a static site generator in Go</a>
+        <p class="post-desc">The decisions that felt small at the time — templating engine, YAML schema, CSS pipeline — and why they turned out to matter most.</p>
+        <div class="post-tags">
+          <span class="tag">Braised</span>
+          <span class="tag">Go</span>
+        </div>
+      </div>
+    </li>
+    <li class="post-item">
+      <div class="post-date-col">
+        <span class="post-date-month">Mar</span>
+        <span class="post-date-day">20</span>
+        <span class="post-date-year">2026</span>
+      </div>
+      <div class="post-body">
+        <a href="#" class="post-title">Curriculum design is just documentation design with a grade at the end</a>
+        <p class="post-desc">On the surprising overlap between writing a course module and writing a reference page — and what each discipline can borrow from the other.</p>
+        <div class="post-tags">
+          <span class="tag">Curriculum</span>
+          <span class="tag">Craft</span>
+        </div>
+      </div>
+    </li>
+    <li class="post-item">
+      <div class="post-date-col">
+        <span class="post-date-month">Feb</span>
+        <span class="post-date-day">04</span>
+        <span class="post-date-year">2026</span>
+      </div>
+      <div class="post-body">
+        <a href="#" class="post-title">Radix palette as a design system foundation</a>
+        <p class="post-desc">How a 12-step semantic color scale eliminates the decision fatigue that kills most design consistency over time.</p>
+        <div class="post-tags">
+          <span class="tag">Design</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="section-header">
+    <span class="section-label">Work &amp; Projects</span>
+    <a href="#" class="section-all">Full portfolio →</a>
+  </div>
+
+  <div class="work-grid">
+    <a href="#" class="work-card featured">
+      <span class="work-card-label">Open source · Featured</span>
+      <span class="work-card-title">Braised</span>
+      <p class="work-card-desc">A documentation-first static site generator written in Go. Markdown-native, YAML-configured, Tailwind-powered. This site runs on it.</p>
+      <span class="work-card-link">braised.dev →</span>
+    </a>
+    <a href="#" class="work-card">
+      <span class="work-card-label">Curriculum</span>
+      <span class="work-card-title">PostgreSQL Learning Path</span>
+      <p class="work-card-desc">A progressive learning series from schema design through query optimization.</p>
+    </a>
+    <a href="#" class="work-card">
+      <span class="work-card-label">Documentation</span>
+      <span class="work-card-title">MongoDB Developer Hub</span>
+      <p class="work-card-desc">Technical writing, IA, and information design for MongoDB's developer portal.</p>
+    </a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span class="footer-copy">© 2026 Ravind Kumar</span>
+  <ul class="footer-links">
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#">RSS</a></li>
+  </ul>
+</footer>
+
+<div class="mockup-label">mockup / editorial (pick)</div>
+
+</body>
+</html>

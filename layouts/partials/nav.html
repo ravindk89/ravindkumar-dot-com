@@ -1,0 +1,19 @@
+{{define "navTree"}}
+{{range .}}
+{{$liClass := "nav-item"}}{{if .Active}}{{$liClass = "nav-item active"}}{{end}}
+<li class="{{$liClass}}">
+  {{if eq .Kind "heading"}}
+    <span class="sb-group-label">{{.Label}}</span>
+  {{else if .Children}}
+    {{if eq .Kind "section"}}
+      <a href="{{.URL}}" class="sb-link{{if .Active}} active{{end}}">{{.Label}}</a>
+    {{else}}
+      <span class="sb-group-label">{{.Label}}</span>
+    {{end}}
+    <ul>{{template "navTree" .Children}}</ul>
+  {{else}}
+    <a href="{{.URL}}" class="sb-link{{if .Active}} active{{end}}">{{.Label}}</a>
+  {{end}}
+</li>
+{{end}}
+{{end}}

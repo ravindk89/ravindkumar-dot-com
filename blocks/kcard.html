@@ -1,0 +1,8 @@
+<a href="{{index .Props "href"}}" class="kcard{{if index .Props "active"}} kcard--active{{end}}">
+  <div class="kcard-line"></div>
+  <div class="kcard-body">
+    <span class="kcard-kicker">{{index .Props "kicker"}}</span>
+    <div class="kcard-desc">{{.Children}}</div>
+  </div>
+  <span class="kcard-arrow">→</span>
+</a>
