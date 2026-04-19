@@ -38,12 +38,16 @@
   <!-- MAIN -->
   <div class="main-content">
 
-    <section class="hero-zone">
-      <div class="hero-intro">
-        <p class="hero-eyebrow">{{index .Site.Meta "hero_eyebrow"}}</p>
+    <article class="page-body">
+      <header class="blog-post-header">
+        {{if .Page.Title}}<h1 class="page-title">{{.Page.Title}}</h1>{{end}}
+        {{if index .Page.Meta "date"}}<time class="blog-post-date" datetime="{{index .Page.Meta "date"}}">{{index .Page.Meta "date"}}</time>{{end}}
+      </header>
+      <div class="page-prose">
+        {{if index .Page.Meta "hero_eyebrow"}}<p class="hero-eyebrow">{{index .Page.Meta "hero_eyebrow"}}</p>{{end}}
         {{.Page.Content}}
       </div>
-    </section>
+    </article>
 
     {{template "footer" .}}
 

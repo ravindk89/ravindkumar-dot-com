@@ -248,7 +248,8 @@ body {
   padding: 1.5rem 0 2rem;
 }
 
-.sb-group-label {
+.sb-group-label,
+.sb-group-toggle {
   display: block;
   font-family: var(--font-sans);
   font-size: 0.625rem;
@@ -259,18 +260,44 @@ body {
   padding: 0.75rem 1.25rem 0.3rem;
   margin-top: 0.5rem;
 }
-.sb-group-label:first-child { margin-top: 0; }
+.sb-group-label:first-child,
+.sb-group-toggle:first-child { margin-top: 0; }
+
+/* Toggle button resets + caret */
+.sb-group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  margin-top: 0;
+}
+.sb-caret {
+  font-size: 0.55rem;
+  opacity: 0.55;
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+.sb-group-toggle[aria-expanded="false"] .sb-caret { transform: rotate(-90deg); }
+.sb-group-toggle[aria-expanded="false"] + ul { display: none; }
 
 /* nav-item ul reset for sidebar */
 .sidebar ul,
 .sidebar li { list-style: none; padding: 0; margin: 0; }
 
 /* Group separator — inset line above each section heading (not the first) */
-.sidebar > ul > li + li:has(> .sb-group-label) {
+.sidebar > ul > li + li:has(> .sb-group-label),
+.sidebar > ul > li + li:has(> .sb-group-toggle) {
   margin-top: 0.5rem;
   padding-top: 0.25rem;
 }
-.sidebar > ul > li + li:has(> .sb-group-label)::before {
+.sidebar > ul > li + li:has(> .sb-group-label)::before,
+.sidebar > ul > li + li:has(> .sb-group-toggle)::before {
   content: '';
   display: block;
   height: 1px;
@@ -278,10 +305,22 @@ body {
   margin: 0 1.25rem;
 }
 
-/* L2 indent */
+/* L2 — items directly under a heading group (Blog, Essays, Braised…) */
 .sidebar ul ul .sb-link {
   padding-left: 2rem;
   font-size: 0.78125rem;
+}
+
+/* L3 — group labels/toggles nested inside a section (e.g. "2026" inside Blog) */
+.sidebar ul ul ul .sb-group-label,
+.sidebar ul ul ul .sb-group-toggle {
+  padding-left: 2.5rem;
+}
+
+/* L4 — page links nested inside a year/group inside a section */
+.sidebar ul ul ul ul .sb-link {
+  padding-left: 3rem;
+  font-size: 0.75rem;
 }
 
 .sb-link {
@@ -305,6 +344,14 @@ body {
   border-left-color: var(--accent);
   background: var(--accent-sub);
   font-weight: 500;
+}
+/* Ancestor section links in the active path: suppress the pip,
+   keep only a subtle color shift so the branch is still readable */
+li:has(> ul) > .sb-link.active {
+  color: var(--text-mid);
+  border-left-color: transparent;
+  background: transparent;
+  font-weight: 400;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -472,6 +519,40 @@ body {
 }
 .footer-links a:hover { color: var(--text-mid); }
 
+/* ── Blog post header ── */
+.blog-post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-mid);
+}
+.blog-post-header .hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.blog-post-header .hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1px;
+  background: var(--accent);
+}
+.blog-post-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.625rem;
+  letter-spacing: 0.02em;
+}
+
 /* ── Standard page prose layout ── */
 .page-body {
   padding: 2.5rem 3rem;
@@ -514,6 +595,21 @@ body {
 }
 .page-prose li { margin-bottom: 0.4rem; }
 .page-prose a { color: var(--accent-txt); text-decoration: underline; text-underline-offset: 2px; }
+.page-prose dl { margin-bottom: 1.25rem; }
+.page-prose dt {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text);
+  margin-top: 0.75rem;
+}
+.page-prose dt:first-child { margin-top: 0; }
+.page-prose dd {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 0;
+}
 .page-prose code {
   font-family: var(--font-mono);
   font-size: 0.875em;

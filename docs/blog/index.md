@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: page
+layout: blog
 hide_aside: true
 hero_eyebrow: It's too damn hard to write but I'll do it anyways
 ---

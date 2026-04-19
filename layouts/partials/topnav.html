@@ -1,0 +1,62 @@
+{{define "topnav"}}
+<!-- ═══════════════════════ TOP NAV -->
+<header class="topnav">
+  <div class="topnav-identity">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="topnav-name">{{.Site.Title}}</a>
+  </div>
+
+  <nav>
+    <ul class="topnav-links">
+      <li>
+        <button>Projects <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="https://ravindkumar.com/braised-docs" class="dropdown-item">Braised Docs</a>
+          <a href="https://ravindkumar.com/postgres-docs" class="dropdown-item">PostgreSQL + Braised</a>
+        </div>
+      </li>
+      <li><a href="{{index .Site.Meta "github_url"}}">Git</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav-right">
+    <a href="{{index .Site.Meta "cta_url"}}" class="topnav-cta">
+      {{index .Site.Meta "cta_label"}}
+    </a>
+
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false">
+        <span class="tb-dot"></span>
+        <span id="themeBtnLabel">Light</span>
+        <span class="tb-chevron">▾</span>
+      </button>
+      <div class="theme-menu" id="themeMenu" role="menu">
+        <span class="theme-menu-label">Color theme</span>
+          {{if .Site.Themes.Values}}
+          {{range .Site.Themes.Values}}
+          <button class="theme-opt" data-theme="{{.}}" role="menuitem">
+            <span class="theme-opt-swatch"></span>
+            {{.}}
+          </button>
+          {{end}}
+          {{else}}
+          <button class="theme-opt" data-theme="light" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#f7f1e6"></span>
+            Light
+          </button>
+          <button class="theme-opt" data-theme="neutral" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#e8e4dd"></span>
+            Neutral
+          </button>
+          <button class="theme-opt" data-theme="dark" role="menuitem">
+            <span class="theme-opt-swatch" style="background:#1e1b16; border-color:rgba(255,255,255,0.18)"></span>
+            Dark
+          </button>
+          {{end}}
+      </div>
+    </div>
+  </div>
+</header>
+{{end}}
