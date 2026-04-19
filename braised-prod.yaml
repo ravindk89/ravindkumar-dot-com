@@ -1,0 +1,20 @@
+site:
+  title: Ravind Kumar
+  url: https://ravindkumar.com
+  description: Blog, portfolio, and showcase projects by Ravind Kumar
+  meta:
+    hero_eyebrow: "Documentation & Curriculum Engineer"
+    cta_url: "/work-with-me/"
+    cta_label: "Work with me →"
+    github_url: "https://github.com/ravindk89"
+    linkedin_url: "https://www.linkedin.com/in/ravindk89"
+
+themes:
+  values: [light, neutral, dark]
+  default: light
+
+build:
+  output: ./dist
+  drafts: false
+
+nav: nav.yaml
