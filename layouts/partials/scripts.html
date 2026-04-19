@@ -1,0 +1,66 @@
+{{define "page-scripts"}}
+<script>
+  (function () {
+    var root  = document.documentElement;
+    var btn   = document.getElementById('themeBtn');
+    var label = document.getElementById('themeBtnLabel');
+    var menu  = document.getElementById('themeMenu');
+    var opts  = menu.querySelectorAll('.theme-opt');
+
+    // ── Theme switcher ──────────────────────────────────────────────────────
+    function setTheme(key) {
+      root.setAttribute('data-theme', key);
+      label.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+      opts.forEach(function(o) { o.classList.toggle('active', o.dataset.theme === key); });
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('open');
+      try { localStorage.setItem('braised-theme', key); } catch(e) {}
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    opts.forEach(function(opt) {
+      opt.addEventListener('click', function() { setTheme(opt.dataset.theme); });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#themeSwitcher')) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var current = root.getAttribute('data-theme') || 'light';
+    label.textContent = current.charAt(0).toUpperCase() + current.slice(1);
+    opts.forEach(function(o) { o.classList.toggle('active', o.dataset.theme === current); });
+
+    // ── Sidebar hamburger ───────────────────────────────────────────────────
+    var navToggle = document.getElementById('navToggle');
+    var sidebar   = document.getElementById('sidebar');
+    var overlay   = document.getElementById('navOverlay');
+
+    if (navToggle) {
+      navToggle.addEventListener('click', function() {
+        var open = sidebar.classList.toggle('is-open');
+        overlay.classList.toggle('is-visible', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+      });
+      overlay.addEventListener('click', function() {
+        sidebar.classList.remove('is-open');
+        overlay.classList.remove('is-visible');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // ── Collapsible nav groups ──────────────────────────────────────────────
+    document.querySelectorAll('.sb-group-toggle').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+      });
+    });
+  })();
+</script>
+{{end}}

@@ -1,0 +1,9 @@
+{{define "footer"}}
+    <footer class="site-footer">
+      <span class="footer-copy">&copy; 2026 {{.Site.Title}}</span>
+      <ul class="footer-links">
+        <li><a href="{{index .Site.Meta "github_url"}}">GitHub</a></li>
+        <li><a href="{{index .Site.Meta "linkedin_url"}}">LinkedIn</a></li>
+      </ul>
+    </footer>
+{{end}}

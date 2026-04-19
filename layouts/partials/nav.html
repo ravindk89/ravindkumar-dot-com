@@ -7,6 +7,11 @@
   {{else if .Children}}
     {{if eq .Kind "section"}}
       <a href="{{.URL}}" class="sb-link{{if .Active}} active{{end}}">{{.Label}}</a>
+    {{else if .Collapsed}}
+      <button class="sb-group-toggle" aria-expanded="{{or .Active (not .Collapsed)}}">
+        <span>{{.Label}}</span>
+        <span class="sb-caret">▾</span>
+      </button>
     {{else}}
       <span class="sb-group-label">{{.Label}}</span>
     {{end}}

@@ -2,19 +2,26 @@
   "version": 1,
   "files": {
     "/docs/docs/about.md": {
-      "hash": "c229d844",
+      "hash": "7d248196",
       "chunk_ids": [
-        "/about"
+        "/about",
+        "/about#work-history"
+      ]
+    },
+    "/docs/docs/blog/2026/just-doing-the-thing.md": {
+      "hash": "da9b8f8c",
+      "chunk_ids": [
+        "/blog/2026/just-doing-the-thing"
       ]
     },
     "/docs/docs/blog/index.md": {
-      "hash": "5e5aedf7",
+      "hash": "fb34bbde",
       "chunk_ids": [
         "/blog"
       ]
     },
     "/docs/docs/essays/index.md": {
-      "hash": "78b10723",
+      "hash": "91498c3d",
       "chunk_ids": [
         "/essays"
       ]

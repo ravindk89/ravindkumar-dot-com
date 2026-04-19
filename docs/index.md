@@ -15,8 +15,12 @@ I'm struck that for all the writing I've done over the years, I have done absolu
 This site aims to correct that 
 
 ::::{.kcards}
-:::{.kcard kicker="Yet Another Static Site Generator" href="/projects/braised/" active="true"}
-BraiseDocs is a Proof-of-Concept around docs with out-of-the-box support for RAG pipelines, 'backmatter' for AI-augmented updates, and a process-level MCP for improved development.
+:::{.kcard kicker="Just Doing The Thing" href="/blog/2026/just-doing-the-thing/" active="true"}
+It took just about 30 days to get to this point if I start counting from the first bit of (AI generated) code piped from some remote server farm to my Xubuntu-on-a-stick laptop. 
+:::
+
+:::{.kcard kicker="Yet Another Static Site Generator" href="/projects/braised/"}
+BraiseDocs is a Proof-of-Concept around docs with out-of-the-box support for RAG pipelines and a process-level MCP for improved development.
 :::
 
 :::{.kcard kicker="Teaching Old Dogs New Tricks" href="/projects/postgres/"}
