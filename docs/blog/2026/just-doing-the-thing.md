@@ -12,7 +12,7 @@ If I start counting from the first time that I said out loud "I really need some
 Which, I think, gives some indication of just how long it's been since I've written for anything outside of a professional contribution.
 
 It's worth noting that I did do this the hard way in the end. 
-There's half a dozen sites which are built on the premise of 'this is somewhere to pump a nonstop stream of <stuff> out onto the internet.' 
+There's half a dozen sites which are built on the premise of 'this is somewhere to pump a nonstop stream of `<stuff>` out onto the internet.' 
 Even if I wanted to separate myself from the *aaS services, most small virtual private server hosts offer website build-from-block toolings to make something like a blog fairly trivial.
 
 Hell after all these years of doing docs-as-code work I really should have just grabbed something like Hugo and gotten this done in a day and a half.
