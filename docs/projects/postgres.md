@@ -3,7 +3,7 @@ title: PostgreSQL + BraiseDocs
 layout: page
 ---
 
-A contemporary rendering of the PostgreSQL documentation, and a testbed for using [Braised Docs](https://ravindkumar.com/braised-docs) to build a RAG + MCP server to see how it could benefit PostgreSQL development.
+A contemporary rendering of the PostgreSQL documentation, and a testbed for using [Braised Docs](https://ravindkumar.com/braised-docs/) to build a RAG + MCP server to see how it could benefit PostgreSQL development.
 
 So I want to be super clear here - the PostGreSQL docs have existed in their current form for a good reason.
 My choice in using them is not derived from a critique of the PGSQL docs team.

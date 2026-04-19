@@ -26,7 +26,7 @@ And at least one major point of discussion in mature and proper AI usage is "You
 
 So I did a few things:
 
-- Built [Braised Docs](https://ravindkumar.com/braised-docs?ref=internal)
+- Built [Braised Docs](https://ravindkumar.com/braised-docs/?ref=internal)
 - And used that to build a [markdown port of PostGreSQL docs](https://ravindkumar.com/postgres-docs?ref=internal)
 - And also used it to build this blog site
 

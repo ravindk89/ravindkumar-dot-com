@@ -3,7 +3,7 @@ title: Braised Docs
 layout: page
 ---
 
-[Braised Docs](https://ravindkumar.com/braised-docs?ref-internal) is a Proof-of-Concept around docs with out-of-the-box support for RAG pipelines and a process-level MCP for improved development.
+[Braised Docs](https://ravindkumar.com/braised-docs/?ref-internal) is a Proof-of-Concept around docs with out-of-the-box support for RAG pipelines and a process-level MCP for improved development.
 
 I built it for two main reasons:
 
