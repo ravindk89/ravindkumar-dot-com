@@ -8,7 +8,7 @@ hero_eyebrow: I really don't have an excuse now
 
 It took just about 30 days to get to this point if I start counting from the first bit of (AI generated) code piped from some remote server farm to my Xubuntu-on-a-stick laptop. 
 
-If I start counting from the first time that I said out loud "I really somewhere to write things," then I'd have to count from the last thing I wrote on some blogging platform whose hostname I have entirely forgotten. 
+If I start counting from the first time that I said out loud "I really need somewhere to write things," then I'd have to count from the last thing I wrote on some blogging platform whose hostname I have entirely forgotten. 
 Which, I think, gives some indication of just how long it's been since I've written for anything outside of a professional contribution.
 
 It's worth noting that I did do this the hard way in the end. 
