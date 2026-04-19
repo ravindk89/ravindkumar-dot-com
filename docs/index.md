@@ -4,7 +4,7 @@ layout: home
 hide_aside: true
 ---
 
-I've been writing documentation in 2012, having started in the field post a B.A in Literary Journalism.
+I've been writing documentation since 2012, having started in the field post a B.A in Literary Journalism.
 I have built documentation and curriculum for server-side and cloud-hosted software solutions, and the content I've published has been viewed by millions of real users over the years.
 
 It is tremendously fun to get my hands into every part of the software stack and experience things as a user.
