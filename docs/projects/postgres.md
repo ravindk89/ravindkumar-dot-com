@@ -10,7 +10,7 @@ My choice in using them is not derived from a critique of the PGSQL docs team.
 
 Rather, it is a long-standing and well-known corpus of documentation, which makes it a fantastic candidate for both migration *and* RAG-ization.
 
-If Braised does what I built it to do, then at some point my [PostGresQL docs](https://ravindkumar.com/postgres-docs) will include a full MCP server, which in theory would help any developer in their PGSQL work.
+If Braised does what I built it to do, then at some point my [PostGresQL docs](https://ravindkumar.com/postgres-docs/) will include a full MCP server, which in theory would help any developer in their PGSQL work.
 This is purely from a docs perspective - this is not an MCP built around things like query analysis or database management.
 It's an MCP that can help you answer questions about how things should work, what commands are supported, and what valid syntax a specific query might need.
 
