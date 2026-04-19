@@ -12,7 +12,7 @@ This is the absolute crux of the writer-engineer's skillset and what I believe w
 We know because we have done the thing, and in doing it we can better use the available tooling to build better outputs.
 
 I'm struck that for all the writing I've done over the years, I have done absolutely none for myself, or about myself, or reflecting anything I've thought.
-This site aims to correct that 
+This site aims to correct that, among other things.
 
 ::::{.kcards}
 :::{.kcard kicker="Just Doing The Thing" href="/blog/2026/just-doing-the-thing/" active="true"}
