@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build site
-        run: docker run --rm -v $(pwd):/site ghcr.io/ravindk89/braised:latest build --config braised-staging.yaml
+        env:
+          GITHUB_REF_NAME: ${{ github.head_ref }}
+        run: docker run --rm -e GITHUB_REF_NAME -v $(pwd):/site ghcr.io/ravindk89/braised:latest build --config braised-staging.yaml
 
       - name: Deploy
         uses: burnett01/rsync-deployments@v8
@@ -28,12 +30,21 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
           remote_key_pass: ${{ secrets.DEPLOY_KEY_PASS }}
 
-      - uses: actions/github-script@v7
+      - name: Append staging URL to PR description
+        uses: actions/github-script@v7
         with:
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            const stagingUrl = `https://staging.ravindkumar.com/staging/${{ github.head_ref }}/`;
+            const pr = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Staged at https://staging.ravindkumar.com/site/${{ github.head_ref }}/`
-            })
+              pull_number: context.issue.number
+            });
+            const body = pr.data.body || '';
+            if (body.includes(stagingUrl)) return;
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              body: body + `\n\n---\n**Staged:** ${stagingUrl}`
+            });

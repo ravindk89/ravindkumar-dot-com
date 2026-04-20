@@ -16,6 +16,6 @@ themes:
 build:
   output: ./dist
   drafts: false
-  base_url: /site
+  base_url: /staging/${GITHUB_REF_NAME}
 
 nav: nav.yaml
