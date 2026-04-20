@@ -4,6 +4,7 @@ site:
   description: Blog, portfolio, and showcase projects by Ravind Kumar
   meta:
     description: "Blog, portfolio, and projects by Ravind Kumar — technical writing leader and documentation engineer."
+    ga_id: "G-VFNM1YNNPL"
     hero_eyebrow: "Documentation & Curriculum Engineer"
     cta_url: "/work-with-me/"
     cta_label: "Work with me →"

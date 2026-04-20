@@ -19,6 +19,17 @@
   <meta name="twitter:title" content="{{if .Page.Title}}{{.Page.Title}}{{else}}{{.Site.Title}}{{end}}">
   <meta name="twitter:description" content="{{index .Site.Meta "description"}}">
 
+  <!-- Google Analytics -->
+  {{if index .Site.Meta "ga_id"}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{index .Site.Meta "ga_id"}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{index .Site.Meta "ga_id"}}');
+  </script>
+  {{end}}
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/assets/braised.css">
   <script defer src="/assets/blocks.js"></script>
