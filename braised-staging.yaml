@@ -1,6 +1,7 @@
 site:
   title: Ravind Kumar
   url: https://staging.ravindkumar.com
+  base_url: /staging/${BRAISED_BRANCH}
   description: Blog, portfolio, and showcase projects by Ravind Kumar
   meta:
     hero_eyebrow: "Documentation & Curriculum Engineer"
@@ -16,6 +17,5 @@ themes:
 build:
   output: ./dist
   drafts: false
-  base_url: /site
 
 nav: nav.yaml
