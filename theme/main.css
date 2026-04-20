@@ -65,8 +65,8 @@
   --border-mid:  rgba(255,255,255,0.11);
   --border-str:  rgba(255,255,255,0.18);
   --text:        #f0e8d5;
-  --text-mid:    #a89278;
-  --text-muted:  #6b5e4e;
+  --text-mid:    #c0a882;
+  --text-muted:  #907a64;
   --accent:      #c87848;
   --accent-sub:  rgba(200,120,72,0.12);
   --accent-brd:  rgba(200,120,72,0.30);
@@ -694,15 +694,15 @@ li:has(> ul) > .sb-link.active {
 .theme-opt:hover { color: var(--text); background: var(--bg-hover); }
 .theme-opt.active { color: var(--accent-txt); font-weight: 500; }
 .theme-opt-swatch {
-  width: 10px; height: 10px;
+  width: 12px; height: 12px;
   border-radius: 50%;
-  border: 1px solid var(--border-str);
+  border: 1.5px solid rgba(0,0,0,0.18);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
   flex-shrink: 0;
 }
-/* Per-theme swatch fill colors (used in config-driven path where no inline style is written) */
 .theme-opt[data-theme="light"]   .theme-opt-swatch { background: #f7f1e6; }
-.theme-opt[data-theme="neutral"] .theme-opt-swatch { background: #e8e4dd; }
-.theme-opt[data-theme="dark"]    .theme-opt-swatch { background: #1e1b16; border-color: rgba(255,255,255,0.25); }
+.theme-opt[data-theme="neutral"] .theme-opt-swatch { background: #c8c2ba; }
+.theme-opt[data-theme="dark"]    .theme-opt-swatch { background: #1e1b16; border-color: rgba(255,255,255,0.2); box-shadow: none; }
 
 /* ── Sidebar hamburger toggle ── */
 .nav-toggle {

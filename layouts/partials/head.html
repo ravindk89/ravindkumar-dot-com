@@ -1,0 +1,37 @@
+{{define "head"}}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{if .Page.Title}}{{.Page.Title}} — {{end}}{{.Site.Title}}</title>
+
+  <!-- Canonical -->
+  {{if .Site.URL}}<link rel="canonical" href="{{.Site.URL}}{{.Page.URL}}">{{end}}
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{.Site.Title}}">
+  <meta property="og:title" content="{{if .Page.Title}}{{.Page.Title}}{{else}}{{.Site.Title}}{{end}}">
+  <meta property="og:description" content="{{index .Site.Meta "description"}}">
+  <meta property="og:type" content="{{if index .Page.Meta "date"}}article{{else}}website{{end}}">
+  {{if .Site.URL}}<meta property="og:url" content="{{.Site.URL}}{{.Page.URL}}">{{end}}
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{if .Page.Title}}{{.Page.Title}}{{else}}{{.Site.Title}}{{end}}">
+  <meta name="twitter:description" content="{{index .Site.Meta "description"}}">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/braised.css">
+  <script defer src="/assets/blocks.js"></script>
+  <script>
+    (function() {
+      var stored = localStorage.getItem('braised-theme');
+      {{if .Site.Themes.Default -}}
+      var preferred = '{{.Site.Themes.Default}}';
+      {{- else -}}
+      var preferred = 'light';
+      {{- end}}
+      document.documentElement.dataset.theme = stored || preferred;
+    })();
+  </script>
+</head>
+{{end}}

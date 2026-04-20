@@ -4,7 +4,7 @@
 - Writing:      
   - label: Blog
     url: blog/index.md
-    items:    
+    items:
       - label: "2026"
         collapsed: true
         items:
