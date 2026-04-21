@@ -61,6 +61,70 @@
         toggle.setAttribute('aria-expanded', String(!expanded));
       });
     });
+
+    // ── Topnav dropdowns (click + keyboard) ────────────────────────────────
+    document.querySelectorAll('.topnav-links > li').forEach(function(li) {
+      var trigger  = li.querySelector(':scope > button');
+      var dropdown = li.querySelector(':scope > .dropdown');
+      if (!trigger || !dropdown) return;
+
+      function openMenu() {
+        dropdown.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function closeMenu() {
+        dropdown.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.contains('open') ? closeMenu() : openMenu();
+      });
+
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (dropdown.classList.contains('open')) {
+            closeMenu();
+          } else {
+            openMenu();
+            dropdown.querySelector('.dropdown-item').focus();
+          }
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          openMenu();
+          dropdown.querySelector('.dropdown-item').focus();
+        } else if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      dropdown.addEventListener('keydown', function(e) {
+        var items = Array.from(dropdown.querySelectorAll('.dropdown-item'));
+        var idx   = items.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          items[(idx + 1) % items.length].focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (idx <= 0) { closeMenu(); trigger.focus(); }
+          else items[idx - 1].focus();
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          closeMenu();
+          trigger.focus();
+        }
+      });
+
+      // Close on outside click or when focus leaves the menu entirely
+      document.addEventListener('click', function(e) {
+        if (!li.contains(e.target)) closeMenu();
+      });
+      li.addEventListener('focusout', function(e) {
+        if (!li.contains(e.relatedTarget)) closeMenu();
+      });
+    });
   })();
 </script>
 {{end}}

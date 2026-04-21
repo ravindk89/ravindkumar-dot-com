@@ -11,6 +11,7 @@
 :root {
   --sidebar-w:  220px;
   --topnav-h:   44px;
+  --shell-max:  1280px;
   --font-sans:  'IBM Plex Sans', sans-serif;
   --font-serif: 'IBM Plex Serif', Georgia, serif;
   --font-mono:  'IBM Plex Mono', monospace;
@@ -185,7 +186,8 @@ body {
   z-index: 300;
   padding: 0.375rem 0;
 }
-.topnav-links > li:hover .dropdown { display: block; }
+.topnav-links > li:hover .dropdown,
+.topnav-links > li .dropdown.open { display: block; }
 .dropdown-item {
   display: block;
   font-family: var(--font-sans);
@@ -278,8 +280,8 @@ body {
   margin-top: 0;
 }
 .sb-caret {
-  font-size: 0.55rem;
-  opacity: 0.55;
+  font-size: 0.65rem;
+  opacity: 0.7;
   transition: transform 0.15s;
   flex-shrink: 0;
 }
@@ -314,7 +316,7 @@ body {
 /* L3 — group labels/toggles nested inside a section (e.g. "2026" inside Blog) */
 .sidebar ul ul ul .sb-group-label,
 .sidebar ul ul ul .sb-group-toggle {
-  padding-left: 2.5rem;
+  padding-left: 3.25rem;
 }
 
 /* L4 — page links nested inside a year/group inside a section */
@@ -332,26 +334,43 @@ body {
   color: var(--text-mid);
   text-decoration: none;
   padding: 0.35rem 1.25rem;
-  border-left: 2px solid transparent;
+  border-left: 3px solid transparent;
   transition: color 0.1s, background 0.1s;
 }
 .sb-link:hover {
   color: var(--text);
   background: var(--bg-hover);
 }
+/* Active page pip */
 .sb-link.active {
   color: var(--accent-txt);
   border-left-color: var(--accent);
   background: var(--accent-sub);
   font-weight: 500;
 }
-/* Ancestor section links in the active path: suppress the pip,
-   keep only a subtle color shift so the branch is still readable */
-li:has(> ul) > .sb-link.active {
+/* Ancestor section links (has active descendants): soften so they don't compete */
+li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
   color: var(--text-mid);
   border-left-color: transparent;
   background: transparent;
   font-weight: 400;
+}
+/* Single continuous rail down the top-level section's child list.
+   Uses ::before so the rail sits at left: 0 of the ul — exactly where
+   the sb-link border-left starts — letting the active pip overlay it cleanly. */
+.sidebar > ul > li:has(.sb-link.active) > ul {
+  margin-left: 1.75rem;
+  position: relative;
+}
+.sidebar > ul > li:has(.sb-link.active) > ul::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-str);
+  pointer-events: none;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -359,7 +378,7 @@ li:has(> ul) > .sb-link.active {
 ═══════════════════════════════════════════════════════ */
 .main-content {
   min-width: 0;        /* prevent grid 1fr column from expanding to content min-width */
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 /* ── Hero zone ── */
@@ -368,7 +387,6 @@ li:has(> ul) > .sb-link.active {
   border-bottom: 1px solid var(--border-mid);
 }
 .hero-intro {
-  max-width: 560px;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -394,6 +412,7 @@ li:has(> ul) > .sb-link.active {
 
 /* h1 inside hero-intro becomes the hero headline */
 .hero-intro h1 {
+  max-width: 560px;
   font-family: var(--font-serif);
   font-size: 2.25rem;
   font-weight: 400;
@@ -407,15 +426,6 @@ li:has(> ul) > .sb-link.active {
   color: var(--accent-txt);
 }
 
-/* first <p> after h1 becomes the bio */
-.hero-intro p {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--text-mid);
-  line-height: 1.8;
-  margin: 0 0 1.25rem;
-}
-
 /* ── Kicker cards ── */
 .kcard-list {
   display: flex;
@@ -423,7 +433,7 @@ li:has(> ul) > .sb-link.active {
   width: 100%;
   border: 1px solid var(--border-mid);
   border-bottom: none;
-  border-radius: 6px 6px 0 0;
+  border-radius: 5px 5px 0 0;
   margin-top: 2.25rem;
 }
 .kcard:first-child { border-radius: 5px 5px 0 0; }
@@ -526,34 +536,21 @@ li:has(> ul) > .sb-link.active {
   border-bottom: 1px solid var(--border-mid);
 }
 .blog-post-header .hero-eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--accent);
   margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.blog-post-header .hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 1.25rem;
-  height: 1px;
-  background: var(--accent);
 }
 .blog-post-date {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-muted);
-  margin-top: 0.625rem;
+  margin-top: 0.25rem;
   letter-spacing: 0.02em;
 }
 
 /* ── Standard page prose layout ── */
+.hero-zone + .page-body {
+  padding-top: 1.75rem;
+}
 .page-body {
   padding: 2.5rem 3rem;
   max-width: 800px;
@@ -571,8 +568,8 @@ li:has(> ul) > .sb-link.active {
 .page-prose {
   font-family: var(--font-serif);
   font-size: 1rem;
-  color: var(--text-mid);
-  line-height: 1.8;
+  color: var(--text);
+  line-height: 1.75;
 }
 .page-prose p { margin-bottom: 1.25rem; }
 .page-prose h2 {
@@ -702,7 +699,13 @@ li:has(> ul) > .sb-link.active {
 }
 .theme-opt[data-theme="light"]   .theme-opt-swatch { background: #f7f1e6; }
 .theme-opt[data-theme="neutral"] .theme-opt-swatch { background: #c8c2ba; }
-.theme-opt[data-theme="dark"]    .theme-opt-swatch { background: #1e1b16; border-color: rgba(255,255,255,0.2); box-shadow: none; }
+.theme-opt[data-theme="dark"]    .theme-opt-swatch { background: #1e1b16; }
+
+/* In dark mode all swatches get the white-alpha border treatment for consistency */
+[data-theme="dark"] .theme-opt-swatch {
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: none;
+}
 
 /* ── Sidebar hamburger toggle ── */
 .nav-toggle {
@@ -803,4 +806,34 @@ li:has(> ul) > .sb-link.active {
     align-items: flex-start;
     gap: 0.875rem;
   }
+}
+
+/* ── Wide screens: constrain and center the layout shell ── */
+@media (min-width: 1280px) {
+  /* Topnav background stays full-width; inner content aligns with the shell */
+  .topnav {
+    padding-left:  calc((100% - var(--shell-max)) / 2);
+    padding-right: calc((100% - var(--shell-max)) / 2 + 1.5rem);
+  }
+
+  .page-shell {
+    max-width: var(--shell-max);
+    margin-inline: auto;
+  }
+
+  /* Center the reading column within its grid cell */
+  .page-body {
+    margin-inline: auto;
+  }
+
+  /* Align hero-zone content with the centered page-body left edge */
+  .hero-zone {
+    padding-left:  calc((100% - 800px) / 2 + 3rem);
+    padding-right: calc((100% - 800px) / 2);
+  }
+}
+
+/* ── Proportional sidebar at very wide screens ── */
+@media (min-width: 1440px) {
+  :root { --sidebar-w: 260px; }
 }

@@ -11,10 +11,10 @@
   <nav>
     <ul class="topnav-links">
       <li>
-        <button>Projects <span class="chevron">▾</span></button>
-        <div class="dropdown">
-          <a href="https://ravindkumar.com/braised-docs/" class="dropdown-item">Braised Docs</a>
-          <a href="https://ravindkumar.com/postgres-docs/" class="dropdown-item">PostgreSQL + Braised</a>
+        <button aria-haspopup="menu" aria-expanded="false">Projects <span class="chevron" aria-hidden="true">▾</span></button>
+        <div class="dropdown" role="menu">
+          <a href="https://ravindkumar.com/braised-docs/" class="dropdown-item" role="menuitem">Braised Docs</a>
+          <a href="https://ravindkumar.com/postgres-docs/" class="dropdown-item" role="menuitem">PostgreSQL + Braised</a>
         </div>
       </li>
       <li><a href="{{index .Site.Meta "github_url"}}">Git</a></li>

@@ -23,9 +23,12 @@
     <section class="hero-zone">
       <div class="hero-intro">
         <p class="hero-eyebrow">{{index .Site.Meta "hero_eyebrow"}}</p>
-        {{.Page.Content}}
       </div>
     </section>
+
+    <article class="page-body">
+      {{.Page.Content}}
+    </article>
 
     {{template "footer" .}}
 
