@@ -15,8 +15,7 @@ Braised in and of itself isn't special.
 If you have a docs site, there's probably a way for you to pipeline the contents to a vector DB and support RAG/MCP/Whatever processing.
 What I wanted to do is make that a first-line part of the build, and work towards adding in further integrations that capture the zeitgeist of AI/agentic interactions with docs.
 
-That means things like production builds automatically running through chunking/embedding pipelines, or 'backmatter' functionality to help connect your docs to the underlying code for AI-augmented updates.
-It has a built-in MCP that in theory should allow for easier development using AI without having to manually review or `curl` the docs (agentic or otherwise).
+That means that when you finish a build, it comes with all the artifacts necessary to power the field of AI/agentic readership, without requiring an array of middlewares, postprocessings, and other random bits and bobs necessary to get to the same end result.
 
 A lot of this is still in-flight, but I've gotten it to work on local Proof-of-Concepts so the wiring is the next step.
 And also hosting - everything should be available on this site at some point, so you would in theory have a few options on how to connect and make use of things.
