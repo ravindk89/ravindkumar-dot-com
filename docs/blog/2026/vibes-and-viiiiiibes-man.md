@@ -41,9 +41,10 @@ Some of you might guess where this is going, or from whom this striking new info
 AI is a powerful tool, but it has serious risks when it comes to it's ability to extrapolate and present highly misleading data with tremendous confidence.
 And if you're hoping you can rely on high-power models to help you, let me disappoint you and say that this all happened using Claude and Opus (4.6 at the time). 
 
-It's not as if this is new information.
-It's well established that AI ultimately cannot determine **Truth**.
+It's not as if AI hallucination is a new problem.
 A combination of training data, algorithms, heuristics, and a good deal of black-box magic goes into driving the insights that we increasingly rely on to get things done.
+Where it does catch it's logical missteps, it is in my experience a measure of chance rather than a guarantee around critical thinking.
+And there is a lot of pain that can come in the space of that uncertainty.
 
 In this particular case though, what struck me as particularly dangerous was that the model drew insight **despite being given a primary source**.
 That is, I pointed it directly at the documentation for a library, and it returned a hallucination in response.
