@@ -74,7 +74,7 @@ Or at least it probably accomplishes that task.
 Hopefully at scale, in a secure fashion, and without memory leaks, painful edge behaviors, unexpected crashes, or any number of other things that will drive users and customers to a land far, far away.
 
 So here we are as I'm trying to figure out why the hell the [burnett01/rsync-deployments](https://github.com/burnett01/rsync-deployments) GitHub action kept halting without emitting any errors, logs, or a hint of something that might help me move things forward.
-There were no logs in the `sshd` logs, so my best guess is something in the secrets was off and SSH was failing to fire.
+There were no obvious entries in the  `sshd` logs, so my best guess is something in the secrets was off and SSH was failing to fire.
 Except that equivalent `rsync` commands against the same keys locally seemed to work.
 
 I needed better debugging and more details on how the action interacted with SSH under the hood.
@@ -103,7 +103,7 @@ Rather than trusting the agent to tell you the difference between an ass and an 
 
 I eventually identified the issue as outdated environment secrets and what I think was just a mis-copied private key.
 And I absolutely needed assistance from the agent in helping to construct innumerable test scripts and commands that I wielded with impunity in attempting to diagnose the issue.
-And pushing back on the agent with a "That definitely doesn't sound right. Check your sources" *did* eventually get me some useful insight.
+Of particular value was pushing back on the agent with a "That definitely doesn't sound right. Check your sources", which *did* eventually get me some useful insight.
 
 And that is really the key to success with this model.
 I never let go of the control stick. 
