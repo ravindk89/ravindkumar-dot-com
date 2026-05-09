@@ -11,7 +11,7 @@
 :root {
   --sidebar-w:  220px;
   --topnav-h:   44px;
-  --shell-max:  1280px;
+  --shell-max:  1100px;
   --font-sans:  'IBM Plex Sans', sans-serif;
   --font-serif: 'IBM Plex Serif', Georgia, serif;
   --font-mono:  'IBM Plex Mono', monospace;
@@ -235,6 +235,8 @@ body {
   display: grid;
   grid-template-columns: var(--sidebar-w) 1fr;
   min-height: calc(100vh - var(--topnav-h));
+  max-width: var(--shell-max);
+  margin-inline: auto;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -553,7 +555,8 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
 }
 .page-body {
   padding: 2.5rem 3rem;
-  max-width: 800px;
+  max-width: 900px;
+  margin-inline: auto;
   min-height: 60vh;
 }
 .page-title {
@@ -626,7 +629,7 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
 
 /* ── Essay layout ── */
 .essay-body {
-  max-width: 65ch;
+  max-width: 72ch;
 }
 .essay-body .page-prose {
   font-size: 1.0625rem;
@@ -832,32 +835,41 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
   }
 }
 
-/* ── Wide screens: constrain and center the layout shell ── */
-@media (min-width: 1280px) {
+/* 768px–959px: wider sidebar before content constraints kick in */
+@media (min-width: 768px) and (max-width: 959px) {
+  :root { --sidebar-w: 300px; }
+}
+
+/* 960px+: tighten side padding — let max-width + centering do the work */
+@media (min-width: 960px) {
+  .page-body  { padding-inline: 2rem; }
+  .hero-zone  { padding-left: 2rem; }
+}
+
+/* ── Gutters: viewport wider than shell-max — decorative frame + topnav alignment ── */
+@media (min-width: 1100px) {
   /* Topnav background stays full-width; inner content aligns with the shell */
   .topnav {
     padding-left:  calc((100% - var(--shell-max)) / 2);
     padding-right: calc((100% - var(--shell-max)) / 2 + 1.5rem);
   }
 
+  /* Darker body creates visible gutters; shell floats on top */
+  body {
+    background: var(--bg-subtle);
+  }
+
   .page-shell {
-    max-width: var(--shell-max);
-    margin-inline: auto;
-  }
-
-  /* Center the reading column within its grid cell */
-  .page-body {
-    margin-inline: auto;
-  }
-
-  /* Align hero-zone content with the centered page-body left edge */
-  .hero-zone {
-    padding-left:  calc((100% - 800px) / 2 + 3rem);
-    padding-right: calc((100% - 800px) / 2);
+    margin-top: 0.75rem;
+    background: var(--bg);
+    box-shadow: 0 0 0 1px var(--border-mid);
   }
 }
 
-/* ── Proportional sidebar at very wide screens ── */
+/* ── Proportional sidebar + wider shell at very wide screens ── */
 @media (min-width: 1440px) {
-  :root { --sidebar-w: 260px; }
+  :root {
+    --sidebar-w: 280px;
+    --shell-max: 1360px;
+  }
 }
