@@ -9,7 +9,7 @@
 
 /* ── Layout tokens — match refined.html dimensions ── */
 :root {
-  --sidebar-w:  220px;
+  --sidebar-w:  300px;
   --topnav-h:   44px;
   --shell-max:  1100px;
   --font-sans:  'IBM Plex Sans', sans-serif;
@@ -502,6 +502,10 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
 }
 .kcard:hover .kcard-arrow { color: var(--accent-txt); transform: translateX(2px); }
 
+/* Override braised base .page-body a decoration — cards are already full-link UI */
+.page-body .kcard,
+.page-body .kcard:hover { text-decoration: none; background: none; }
+
 /* ── Footer ── */
 .site-footer {
   border-top: 1px solid var(--border-mid);
@@ -835,11 +839,6 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
   }
 }
 
-/* 768px–959px: wider sidebar before content constraints kick in */
-@media (min-width: 768px) and (max-width: 959px) {
-  :root { --sidebar-w: 300px; }
-}
-
 /* 960px+: tighten side padding — let max-width + centering do the work */
 @media (min-width: 960px) {
   .page-body  { padding-inline: 2rem; }
@@ -869,7 +868,7 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
 /* ── Proportional sidebar + wider shell at very wide screens ── */
 @media (min-width: 1440px) {
   :root {
-    --sidebar-w: 280px;
+    --sidebar-w: 340px;
     --shell-max: 1360px;
   }
 }
