@@ -5,7 +5,7 @@
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <a href="/" class="topnav-name">{{.Site.Title}}</a>
+    <a href="/" class="topnav-name">{{.Config.Site.Title}}</a>
   </div>
 
   <nav>
@@ -17,13 +17,13 @@
           <a href="https://ravindkumar.com/postgres-docs/" class="dropdown-item" role="menuitem">PostgreSQL + Braised</a>
         </div>
       </li>
-      <li><a href="{{index .Site.Meta "github_url"}}">Git</a></li>
+      <li><a href="{{index .Config.Site.Meta "github_url"}}">Git</a></li>
     </ul>
   </nav>
 
   <div class="topnav-right">
-    <!-- <a href="{{index .Site.Meta "cta_url"}}" class="topnav-cta">
-      {{index .Site.Meta "cta_label"}}
+    <!-- <a href="{{index .Config.Site.Meta "cta_url"}}" class="topnav-cta">
+      {{index .Config.Site.Meta "cta_label"}}
     </a> -->
 
     <div class="theme-switcher" id="themeSwitcher">
@@ -34,8 +34,8 @@
       </button>
       <div class="theme-menu" id="themeMenu" role="menu">
         <span class="theme-menu-label">Color theme</span>
-          {{if .Site.Themes.Values}}
-          {{range .Site.Themes.Values}}
+          {{if .Config.Themes.Values}}
+          {{range .Config.Themes.Values}}
           <button class="theme-opt" data-theme="{{.}}" role="menuitem">
             <span class="theme-opt-swatch"></span>
             {{.}}

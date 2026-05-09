@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+{{template "head" .}}
+<body>
+
+{{template "topnav" .}}
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="page-shell">
+
+  <aside class="sidebar" id="sidebar">
+    {{if .Nav}}
+    <ul>{{template "navTree" .Nav.Roots}}</ul>
+    {{end}}
+  </aside>
+
+  <div class="main-content">
+
+    <article class="page-body essay-body">
+      <header class="blog-post-header">
+        {{if index .Page.Meta "hero_eyebrow"}}<p class="hero-eyebrow">{{index .Page.Meta "hero_eyebrow"}}</p>{{end}}
+        {{if .Page.Title}}<h1 class="page-title">{{.Page.Title}}</h1>{{end}}
+        {{if index .Page.Meta "date"}}<time class="blog-post-date" datetime="{{index .Page.Meta "date"}}">{{index .Page.Meta "date"}}</time>{{end}}
+      </header>
+      <div class="page-prose">
+        {{.Page.Content}}
+      </div>
+    </article>
+
+    {{template "footer" .}}
+
+  </div>
+</div>
+
+{{template "page-scripts" .}}
+
+</body>
+</html>

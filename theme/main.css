@@ -615,6 +615,30 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
   border-radius: 3px;
   padding: 0.1em 0.35em;
 }
+.page-prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.75rem 0;
+  color: var(--text-mid);
+  font-style: italic;
+}
+.page-prose blockquote p { margin-bottom: 0; }
+
+/* ── Essay layout ── */
+.essay-body {
+  max-width: 65ch;
+}
+.essay-body .page-prose {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+.essay-body .page-prose p {
+  margin-bottom: 1.5rem;
+}
+.essay-body .page-prose > p:first-of-type {
+  font-size: 1.125rem;
+  color: var(--text-mid);
+}
 
 /* ── Theme switcher ── */
 .theme-switcher {

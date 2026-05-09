@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build site
-        run: docker run --rm -v $(pwd):/site ghcr.io/ravindk89/braised:latest build --config braised-prod.yaml
+        run: make build-prod
 
       - name: Deploy
         uses: burnett01/rsync-deployments@v8

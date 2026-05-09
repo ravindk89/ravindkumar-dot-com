@@ -16,7 +16,7 @@ jobs:
       - name: Build site
         env:
           BRAISED_BRANCH: ${{ github.head_ref }}
-        run: docker run --rm -e BRAISED_BRANCH -v $(pwd):/site ghcr.io/ravindk89/braised:latest build --config braised-staging.yaml
+        run: make build-staging
 
       - name: Deploy
         uses: burnett01/rsync-deployments@v8
