@@ -16,12 +16,12 @@ This site aims to correct that, among other things.
 
 ::::{.kcards}
 :::{.kcard kicker="Probably Deterministic" href="/essays/2026/probably-deterministic/" active="true"}
-AI has the ability to present itself as deterministic - confidently presenting consistent answers to a problem set.
-The reality is that these are probability machines masquerading as builders of facts.
+AI has the ability to present itself as deterministic - confidently giving consistent answers to a problem set.
+The reality is that these are probability machines where outputs vary even with standard inputs.
 The line between skilled operator and future victim lies in recognizing this and using the tools appropriately.
 :::
 
-:::{.kcard kicker="Just Doing The Thing" href="/blog/2026/just-doing-the-thing/" active="true"}
+:::{.kcard kicker="Just Doing The Thing" href="/blog/2026/just-doing-the-thing/"}
 It took just about 30 days to get to this point if I start counting from the first bit of (AI generated) code piped from some remote server farm to my Xubuntu-on-a-stick laptop. 
 :::
 

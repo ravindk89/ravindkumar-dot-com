@@ -1,7 +1,7 @@
 - Home: index.md
 - About: about.md
 
-- Writing:      
+- Writing:
   - label: Blog
     url: blog/index.md
     items:
@@ -17,7 +17,7 @@
       - label: "2026"
         collapsed: true
         items:
-          - Probably Deterministic: essays/probably-deterministic.md
+          - Probably Deterministic: essays/2026/probably-deterministic.md
 
 - Projects:
   - Braised: projects/braised.md
