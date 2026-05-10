@@ -67,20 +67,25 @@ This is such a reliable behavior that it's a recommended practice to send two or
 And even with these multi-agent modes the writer has to pay close attention, because maybe the fact-checker pulls its fact check from an old comment instead of the actual code, or the reviewer loses context and forgets the style guide, or the writer decides to fall back on punchy staccato "It's not X, it's Y" logical inversions.
 You'll find it during review (if you're reviewing it yourself), or perhaps at publication when you notice the drift in style.
 
-In the worst case, after you get signals from your human consumers that your agentic chatbot helpers are producing worse results for some reason.
+In the worst case, you find drift after you get signals from your human consumers that your agentic chatbot helpers are producing worse results for some reason.
+Or maybe search is getting worse, or a customer has a bad experience with a tutorial, or a feature malfunctions, or you ship a critical CVE to security conscious users.
+
 This happens in engineering too, and most of the engineers I work with or know are fully aware that unmonitored AI processes produce code that requires significant rework, cleanup, or outright trips to the trashbin.
+These discussion happen out in the open, on GitHub and GitLab and elsewhere that automated coding processes run headfirst into the simple question: "Do you understand what you've written? Do you know why you built this? Do you know why you undid this?"
 
-I have spent no small amount of time vibe coding a lab and test framework for Nvidia's NIXL library.
-The goal was to build a lab that we could use to do a near-production curriculum for pre- and post-sales engineering teams related to our (MinIO) [AI Factory](https://www.min.io/partners/nvidia) product and features.
+And they can't answer those questions - not really.
+The agent that does respond is a different session, a different context, a different block of memory on a different GPU in a different rack.
+It might still say yes though.
 
-I have to say out loud that prior to this, I had no idea what NIXL was, what the difference between softRDMA and RDMA and RoCE was, and how to make any of these parts talk to each other in a way that I could get the RDMA kernel counters to legitimately tick.
+I have spent no small amount of time vibe coding a lab and test framework for libraries I have never touched in my life.
+The goal was to build a lab that we could use to do a near-production curriculum for pre- and post-sales engineering teams related to our (MinIO) [AI Factory](https://www.min.io/partners/nvidia)-related products and features.
 Key to all of this work was Claude, because doing synthesis, research, review, and code generation was something that would have taken me orders of magnitude longer to accomplish.
 
 As much as I tried to stay on top of the agent as an orchestrator-reviewer-challenger, I didn't have nearly enough terminology to be particularly efficient at the task.
 What this led to was a series of back-and-forths with the engineer in charge in trying to determine if specific behaviors, callouts, or other quirks picked up by AI analysis were legitimate, hallucinations, or half truths.
 
 At some point the engineer said something that rang out, to the effect of "The agent does not have the right terminology to actually understand this."
-Which was interesting, because I had run the agent against the primary docs for NIXL, Dynamo, our own code, and sent multiple rounds of adversarial agent processes to challenge claims made.
+Which was interesting, because I had run the agent against the primary docs for all the relevant libraries, our own code, and sent multiple rounds of adversarial agent processes to challenge claims made.
 
 To emphasize the point, I made the intentional choice to demand the agent load up all the correct context one would expect. All the code, docs, comments, markdown files, and any blog post I could find that was even somewhat relevant, without having to compact everything.
 You'd think after all of that the agent would have some idea of what it's talking about.
@@ -102,7 +107,7 @@ And each one of us gets in return, "You're right, and here's why."
 
 The reason might be that this probabilistic system read 1 + 1 = 2 and told you that it actually equals fish.
 This seems slightly more likely post-compaction or when your context has grown, where the agent now works from uncertain truncated states and produces similarly unsteady results.
-But either way the if you went into it trusting that you'd get 2, you now have fish instead.
+But either way if you went into it trusting that you'd get 2, you now have fish instead.
 
 One of my regular exercises in vibecoding is the adversary system.
 
