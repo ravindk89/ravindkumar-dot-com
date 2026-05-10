@@ -112,8 +112,8 @@ But either way if you went into it trusting that you'd get 2, you now have fish 
 One of my regular exercises in vibecoding is the adversary system.
 
 - Send one agent to do the thing and demand it source its work wherever possible.
-- Send another agent to analyze the thing and follow up the sources to determine correctness.
-- Send another agent, but this one with a grudge, to challenge and push the findings of the first to further ensure that these systems have done a fair bit of retracking to ensure they actually have parsed or chunked or whatevered this particular block of text correctly.
+- Send another agent to analyze the thing and follow up on the sources to determine correctness.
+- Send another agent, but this one with a grudge to challenge and push the findings of the first.
 
 Even with that the trap exists - I'm assuming that two to three layers of agents checking work will produce an overall reliable result.
 And I'm wrong, because any one of these three can hallucinate, half-step, extrapolate, or go out of scope in a way that the other agents don't catch.
