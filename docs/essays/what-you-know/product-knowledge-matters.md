@@ -175,6 +175,12 @@ While we find employment declines for young workers in occupations where AI prim
 These findings are consistent with automative uses of AI substituting for labor while augmentative uses do not.
 :::
 
+Augmentation is utterly key here, and it hinges on layers of willingness.
+Are executives willing to invest in a workforce that has the knowledge they need to succeed?
+Are workers willing to invest their time in learning new tools, discarding old routines, and re-inventing their positions?
+Somewhere in here I expect there will still be reorganizations, RIFs, and other layoffs coming from larger economic pressures and issues outside of the AI sphere alone.
+But I hope and believe that in this more ideal approach, those will be more strategic and limited rather than seeing tens of thousands of workers fired with no where else to go.
+
 I think the next 6-12 months will show more of these cycles, loudly in the news and quietly across industries, where companies learn hard lessons about the limits of AI and de-humanizing their workforces.
 And when they do, remember that what you know absolutely does matter.
 Even if your leadership doesn't recognize that now, they will when it hits the bottom line.
