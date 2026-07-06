@@ -3,3 +3,9 @@ dist
 artifacts/
 .braised/
 .claude
+
+# Vale: synced style packages are fetched via `vale sync`, don't commit them.
+# Our own custom style (Blog) and vocab are hand-authored and do get committed.
+.vale/styles/*
+!.vale/styles/Blog/
+!.vale/styles/config/

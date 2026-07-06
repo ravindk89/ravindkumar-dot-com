@@ -4,6 +4,7 @@ date: 2026-05-09
 layout: essay
 hide_aside: true
 hero_eyebrow: We probably shouldn't trust our future to a digital coin flip
+id: probably-deterministic
 ---
 
 In the spirit of treading where others have stepped, this post is about something other people are already writing about.

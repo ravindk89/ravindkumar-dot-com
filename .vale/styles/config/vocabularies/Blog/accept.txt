@@ -1,0 +1,7 @@
+[Aa]gentic
+[Dd]atapoints
+hirings
+[Ii]nlining
+[Rr]eranking
+skillsets
+whoopsie
