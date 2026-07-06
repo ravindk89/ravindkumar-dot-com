@@ -1,0 +1,6 @@
+extends: spelling
+message: "Did you really mean '%s'?"
+level: error
+filters:
+  - '[A-Z][a-zA-Z]*' # capitalized words: proper nouns, names, brands
+  - '[A-Z]{2,}s?'     # acronyms, optionally pluralized (LLMs, ROI, CIO)
