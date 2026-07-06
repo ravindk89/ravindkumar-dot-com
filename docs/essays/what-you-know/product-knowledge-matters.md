@@ -8,11 +8,11 @@ hero_eyebrow: The Agent Only Knows What It Sees
 
 There's a common pattern across industries adopting AI as a cost-cutting measure.
 You start with executive leadership declaring confidently that the AI investment would help them defray costs, reduce staffing, and solve problems with no downsides. 
-Later, a few months later, a problem arises with some critical process previously managed by human eyes, insight, and instinct.
+A few months later, a problem arises with some critical process previously managed by human eyes, insight, and instinct.
 The executives pantomime the surprised hand-over-mouth, backtrack a little bit with some slightly revised hiring, and then continue with few lessons learned.
 
 My view here is that AI has exacerbated gaps between executive leadership and the workforce that have always existed just about everywhere you have leadership and workers. 
-You or someone you know have experienced this firsthand when you hear of strategic or business decision that fly in the face of the actual field conditions. 
+You or someone you know have experienced this firsthand when you hear of strategic or business decisions that fly in the face of the actual field conditions. 
 I don't think the size of the organization matters much here either, at least in comparison to executives having clean lines of communication and expectation to the people who execute. 
 
 I want to couch this all in empirical data so I'm going to focus on a handful of news stories that highlight the problem.
