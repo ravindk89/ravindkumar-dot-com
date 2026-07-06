@@ -18,6 +18,10 @@
         collapsed: true
         items:
           - Probably Deterministic: essays/2026/probably-deterministic.md
+      - label: "What You Know"
+        collapsed: true
+        items:
+          - Product Knowledge Matters: essays/what-you-know/product-knowledge-matters.md
 
 - Projects:
   - Braised: projects/braised.md
