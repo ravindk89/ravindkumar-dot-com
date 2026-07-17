@@ -3,11 +3,10 @@ title: What you know about your industry matters
 layout: essay
 hide_aside: true
 hero_eyebrow: I bet you thought that RSS feed wasn't useful
-draft: true
 ---
 
 So I'm going to break patterns here and get straight to the point of this essay with an anecdote. 
-I've done a fair amount of interiews as a team member and hiring manager, and there are a few that have stuck out.
+I've done a fair amount of interviews as a team member and hiring manager, and there are a few that have stuck out.
 One in particular was for a senior technical writing position, where the candidates past history was primarily in API documentation - Java, C++, REST, that sort of thing. 
 And I asked the standard battery of questions around code competency, how they did the writing, how they validated what they wrote. 
 And then I asked a question that I thought was a fairly bland one in the realm of interview questions.
@@ -35,14 +34,14 @@ And that was a problem for a position where we routinely had to ask that questio
 Creativity was at the heart of this question, being able to take seemingly unconnected pieces of the server-client architecture and stitch them together mentally into a "I wonder if this will work."
 It's a thing that can be taught, but neither I nor the team had the cycles to do that kind of mental restructuring given our workload.
 
-If you're following along I said at the beginning I'd get straight to the point and we're 39 code lines in and I still haven't delivered.
+If you're following along I said at the beginning I'd get straight to the point and we're 37 code lines in and I still haven't delivered.
 Jokes on you, I strung you along for engagement.
 Well, jokes on me because it's really more of a 'it took me this long to get to the point,' but hey you're still here so that's a win.
 
 Chew on the questions a bit, especially in context of today's AI engaged age. 
 "How can you use **this**?"
 What is **this** here? 
-Half the problem is you don't know what **this** is until it's in your lap, maybe as a github PR that closed indicating that a new feature needs documentation. 
+Half the problem is you don't know what **this** is until it's in your lap, maybe as a GitHub PR that closed indicating that a new feature needs documentation. 
 Or a PM pings you and asks if you can help out with a deliverable coming down the pipeline.
 Maybe it's a Monday morning Slack message where someone mentions "Hey so we're releasing a thing," and then two days later says "Also we changed how literally every part of this works."
 
@@ -61,7 +60,7 @@ Our group, as I vaguely recall, built a REST service on top of Mongo in homage t
 
 In the first place, *why* we built that REST service came in part to the two questions that were at play.
 Why would we even consider a REST service for a database in the first place, given the rich ecosystem of first-party SDKs we already had?
-PostgreSQL doesn't have a native REST service, and at the time MySQL didn't either (Google ays MySQL REST Service was added in 2025).
+PostgreSQL doesn't have a native REST service, and at the time MySQL didn't either (Google says MySQL REST Service was added in 2025).
 
 Think about it briefly from an application developers point of view.
 An SDK is pretty damn typical and has been for years as far as connecting to a <thing> goes. 
@@ -97,7 +96,7 @@ But at the end of it, what do **you** know about the question and it's answer?
 I have found models of every possible sophistication layer invent details from first-party data sources, assert facts from assumptions, extrapolate badly from partial data, and ultimately mislead you in really nuanced ways.
 You wont catch it because of the confidence in which even smaller models present their findings, and that means *our* human contextual information now becomes an absolute arbiter of quality.
 
-This is where that industry experience experience becomes so much *more* vital than it used to be.
+This is where that industry experience becomes so much *more* vital than it used to be.
 Speaking for myself, I took A+ and CCNA 1/2 in high school because I was interested in computer hardware.
 Today I find myself consistently surprised at how often that knowledge, now 20 years aged, still finds its way into conversations with customer deployments.
 You assume that because another team administers a multi million dollar data center that they *must* know all of these things.
@@ -131,12 +130,12 @@ Not 'oh we happen to log some stuff to MongoDB,' but 'I wonder if I can literall
 **I wonder if** combined with the sheer willpower of someone who wanted to just try and see what would happen. 
 
 At another MDBW she came in for round two and built a video player plugin for MongoDB Compass, part of which involved compressing an entire video file into 16MiB JSON.
-"How can I use this?" combined with her knowledge of vidoe streaming, encoding, compression mechanics.
+"How can I use this?" combined with her knowledge of video streaming, encoding, compression mechanics.
 "I wonder if this will work" combined with her knowledge of coding, design, and development best practices.
 We do ourselves a disservice in thinking that the people who work like her, think like her, build like her, are any *less* valuable today because of AI.
 
 :::{.pull-quote}
-"How can I use this?" combined with her knowledge of vidoe streaming, encoding, compression mechanics.
+"How can I use this?" combined with her knowledge of video streaming, encoding, compression mechanics.
 "I wonder if this will work" combined with her knowledge of coding, design, and development best practices.
 We do ourselves a disservice in thinking that the people who work like her, think like her, build like her, are any *less* valuable today because of AI.
 :::
@@ -152,7 +151,7 @@ If I didn't have any of those things I could have still built the tool.
 But I don't think it would have been anywhere near what it is now, or at the very least would have cost me time and money burning tokens chasing down issues that I never understood in the first place.
 
 I'm chewing on an IoT mesh of ESP32 temperature/humidity devices to log data around my condominium so we can better trace our environmental configurations and optimize our heating/cooling cycles.
-I've leveraged whatever I know about the platform, the hardware, and the science to push and challenge Claude to give me better, more grounded results as we move forweard.
+I've leveraged whatever I know about the platform, the hardware, and the science to push and challenge Claude to give me better, more grounded results as we move forward.
 If I didn't have those things, I could probably still build the entire thing start-to-finish.
 But I have a feeling I'd spend a lot of time and money on hardware and wrong paths, and there's a very real risk of burnout that comes from that.
 

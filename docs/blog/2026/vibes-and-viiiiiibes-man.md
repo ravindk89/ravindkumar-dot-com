@@ -18,7 +18,7 @@ That key has to live somewhere, and whoever has access to that key has access to
 So where do you keep the key?
 
 It has to live somewhere, and you have to trust where it lives.
-With MinIO, this usually came up in conjuction with concerns around keeping certain secret values in plaintext as part of the configuration file.
+With MinIO, this usually came up in conjunction with concerns around keeping certain secret values in plaintext as part of the configuration file.
 This was also a concern at MongoDB, where some config values contained sensitive data.
 
 At Mongo the solution was externalizing the ownership.
@@ -103,7 +103,7 @@ Rather than trusting the agent to tell you the difference between an ass and an 
 
 I eventually identified the issue as outdated environment secrets and what I think was just a mis-copied private key.
 And I absolutely needed assistance from the agent in helping to construct innumerable test scripts and commands that I wielded with impunity in attempting to diagnose the issue.
-Of particular value was pushing back on the agent with a "That definitely doesn't sound right. Check your sources", which *did* eventually get me some useful insight.
+Of particular value was pushing back on the agent with a "That definitely doesn't sound right. Check your sources," which *did* eventually get me some useful insight.
 
 And that is really the key to success with this model.
 I never let go of the control stick. 

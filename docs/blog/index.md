@@ -14,5 +14,5 @@ I think at least one casualty of writing (and reading) professionally is I stopp
 It felt like *more work*, which is both unfortunate and quite frankly a bit stupid.
 It's a different kind of writing, one that I still enjoy once I can get past a curmudgeonly attitude towards just doing the thing.
 
-So that's what these pages are going to be - a "blog", the topic and theme of which I have not even begun to think about.
+So that's what these pages are going to be - a "blog," the topic and theme of which I have not even begun to think about.
 But for now we'll settle on a stream-ish of consciousness-ish that will hopefully be of some utility to you, who must now suffer my thoughts.

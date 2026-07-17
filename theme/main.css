@@ -318,12 +318,13 @@ body {
 /* L3 — group labels/toggles nested inside a section (e.g. "2026" inside Blog) */
 .sidebar ul ul ul .sb-group-label,
 .sidebar ul ul ul .sb-group-toggle {
-  padding-left: 3.25rem;
+  padding-left: 2.75rem;
 }
 
-/* L4 — page links nested inside a year/group inside a section */
+/* L4 — page links nested inside a year/group inside a section.
+   Sits one step (0.75rem) past its L3 group header so pages read as children. */
 .sidebar ul ul ul ul .sb-link {
-  padding-left: 3rem;
+  padding-left: 3.5rem;
   font-size: 0.75rem;
 }
 
