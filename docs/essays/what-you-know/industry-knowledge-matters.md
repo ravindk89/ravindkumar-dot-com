@@ -129,8 +129,8 @@ I can't for the life of me remember how it worked but it was an FPS built on top
 Not 'oh we happen to log some stuff to MongoDB,' but 'I wonder if I can literally use MongoDB for core mechanics.'
 **I wonder if** combined with the sheer willpower of someone who wanted to just try and see what would happen. 
 
-At another MDBW she came in for round two and built a video player plugin for MongoDB Compass, part of which involved compressing an entire video file into 16MiB JSON.
-"How can I use this?" combined with her knowledge of video streaming, encoding, compression mechanics.
+At another MDBW she came in for round two and built a video player plugin for MongoDB Compass, part of which involved compressing an entire video file into 16MiB BSON.
+"How can I use this?" combined with her knowledge of video playback, en/decoding, and compression mechanics.
 "I wonder if this will work" combined with her knowledge of coding, design, and development best practices.
 We do ourselves a disservice in thinking that the people who work like her, think like her, build like her, are any *less* valuable today because of AI.
 
