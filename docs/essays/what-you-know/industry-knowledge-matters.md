@@ -76,7 +76,7 @@ The remaining question of "I wonder if this will work" comes from actually takin
 
 Where AI absolutely comes into play here, both good and bad, is that it can help you with both of these questions.
 You can use agents to unblock you on the 'how can I use this' by directing them to *tell you* using an array of parallel web queries and forum dives.
-Then you can use those agents to handle 'I wonder if this will work' but building out the entire proof with only the time and token burn as your costs.
+Then you can use those agents to handle 'I wonder if this will work' by building out the entire proof with only the time and token burn as your costs.
 The barrier to addressing "How" and "I wonder" has never been lower and more accessible to a wider audience of people, which I look at as something that has significant potential for unlocking new and interesting things.
 
 :::{.pull-quote}
@@ -100,7 +100,7 @@ This is where that industry experience becomes so much *more* vital than it used
 Speaking for myself, I took A+ and CCNA 1/2 in high school because I was interested in computer hardware.
 Today I find myself consistently surprised at how often that knowledge, now 20 years aged, still finds its way into conversations with customer deployments.
 You assume that because another team administers a multi million dollar data center that they *must* know all of these things.
-And yet that industry knowledge, the seemingly at-the-edge bits of know-how that you've amassed through your own personal curiosity, suddenly have extreme relevance.
+And yet that industry knowledge, the seemingly at-the-edge bits of know-how that you've amassed through your own personal curiosity, suddenly has extreme relevance.
 
 :::{.pull-quote}
 Today I find myself consistently surprised at how often that knowledge, now 20 years aged, still finds its way into conversations with customer deployments.
