@@ -15,14 +15,21 @@ I'm struck that for all the writing I've done over the years, I have done absolu
 This site aims to correct that, among other things.
 
 ::::{.kcards}
-:::{.kcard kicker="Probably Deterministic" href="/essays/2026/probably-deterministic/" active="true"}
+
+:::{.kcard kicker="What you know about your industry matters" href="/essays/what-you-know/industry-knowledge-matters/" active="true" }
+Part 2 of 3 in the "What you know" series.
+The topic here is about how our knowledge of our industry (or industries) drives the critical-creative process, something AI can replicate in dangerous and misleading ways.
+:::
+
+:::{.kcard kicker="What you know about your product matters" href="/essays/what-you-know/product-knowledge-matters/" }
+Part 1 of 3 in a series discussing what we know about <thing> and how it still matters in the age of offloading knowing onto AI.
+Here I focus on what you know about your product feeds and drives quality AI engagement, which ultimately leads to better outputs.
+:::
+
+:::{.kcard kicker="Probably Deterministic" href="/essays/2026/probably-deterministic/"}
 AI has the ability to present itself as deterministic - confidently giving consistent answers to a problem set.
 The reality is that these are probability machines where outputs vary even with standard inputs.
 The line between skilled operator and future victim lies in recognizing this and using the tools appropriately.
-:::
-
-:::{.kcard kicker="Just Doing The Thing" href="/blog/2026/just-doing-the-thing/"}
-It took just about 30 days to get to this point if I start counting from the first bit of (AI generated) code piped from some remote server farm to my Xubuntu-on-a-stick laptop. 
 :::
 
 :::{.kcard kicker="Yet Another Static Site Generator" href="/projects/braised/"}

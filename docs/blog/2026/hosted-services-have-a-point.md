@@ -36,7 +36,7 @@ I declined to take advantage of any of these things because saving 4-8$ a month 
 
 3) SSH keys. So many SSH keys, and how the hell do I keep mixing them and their passwords up.
 
-4) `ufw` and `fail2ban` because within *seconds* of getting this working I was getting blitzed with php and wordpress exploit attempts.
+4) `ufw` and `fail2ban` because within *seconds* of getting this working I was getting blitzed with PHP and WordPress exploit attempts.
 
 5) `ddns-updater` to keep everything sync'd up with my DNS host.
 
@@ -59,11 +59,11 @@ One area these tools are absolutely fantastic at are generating and validating w
 
 But, coming back to the lede, would I advocate for build or buy?
 Honestly, it still kind of comes down to the time commitment you want to make.
-Right now, in this moment, I have the time to do it the hard way, so I'm commiting to doing it myself and being pissed off about half the time.
+Right now, in this moment, I have the time to do it the hard way, so I'm committing to doing it myself and being pissed off about half the time.
 
 But a month or a year from now, I might feel differently.
 And at that point, spending a few bucks a month on a VPS, or a few bucks a month on a website builder, or a few bucks a month on a CDN to help with availability, or a few bucks a month for a frontend to help me with WYSIWYG editing, or...whatever it is that makes life *easier*.
 Whatever that thing is, I'll probably end up pulling the trigger on it.
 
 Because hosted services have a point.
-It is a lot less likely to be up at midnight debugging an issue when you pay for it to be someone elses problem.
+It is a lot less likely to be up at midnight debugging an issue when you pay for it to be someone else's problem.

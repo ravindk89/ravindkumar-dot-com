@@ -267,6 +267,12 @@ body {
 .sb-group-label:first-child,
 .sb-group-toggle:first-child { margin-top: 0; }
 
+/* L1 — top-level section headings (Writing, Projects): nudge right so the
+   step down to their L2 items reads even with the deeper levels. */
+.sidebar > ul > li > .sb-group-label {
+  padding-left: 1.75rem;
+}
+
 /* Toggle button resets + caret */
 .sb-group-toggle {
   display: flex;
@@ -318,12 +324,13 @@ body {
 /* L3 — group labels/toggles nested inside a section (e.g. "2026" inside Blog) */
 .sidebar ul ul ul .sb-group-label,
 .sidebar ul ul ul .sb-group-toggle {
-  padding-left: 3.25rem;
+  padding-left: 2.75rem;
 }
 
-/* L4 — page links nested inside a year/group inside a section */
+/* L4 — page links nested inside a year/group inside a section.
+   Sits one step (0.75rem) past its L3 group header so pages read as children. */
 .sidebar ul ul ul ul .sb-link {
-  padding-left: 3rem;
+  padding-left: 3.5rem;
   font-size: 0.75rem;
 }
 
@@ -648,6 +655,9 @@ li:has(> ul):has(ul .sb-link.active) > .sb-link.active {
 .pull-quote {
   --pull-quote-gap: 0.75rem;
   border-left: 4px solid var(--pull-quote-border);
+  /* Base block has 0 side padding; the added left border needs breathing room
+     so text doesn't hug it (obvious on quotes that open with a letter, not "..."). */
+  padding-left: 1.25rem;
 }
 .pull-quote figcaption {
   margin-top: 0.375rem;

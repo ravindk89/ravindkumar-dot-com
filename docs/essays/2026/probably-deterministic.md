@@ -13,7 +13,7 @@ Or thinking about at the very least, but perhaps not saying out loud because the
 This post is not a criticism of AI usage in and of itself.
 This entire site was built using an [SSG](https://ravindkumar.com/braised-docs?ref=mainsite) I vibecoded using AI, so that would be both hypocritical and short-sighted.
 AI is a tool used by an operator, and the operator carries the responsibility of how it gets used.
-This gets slightly hairy if you're using AI to compose and manage AI, but that still falls into the roughout outline of this post.
+This gets slightly hairy if you're using AI to compose and manage AI, but that still falls into the rough outline of this post.
 
 First off, this is entirely inspired by Manny Silva's Docs as Tests & AI, which I have immensely enjoyed reading through.
 I won't spoil the text nor Manny's well-earned publishing income, but there was one section that absolutely stood out to me, and that was in Chapter ([Buy the book and figure it out yourself](https://www.docsastests.com/docs-as-tests-book/?ref=ravindkumar-dot-com)).
