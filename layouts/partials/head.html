@@ -31,8 +31,8 @@
   {{end}}
 
   <link rel="icon" type="image/svg+xml" href="{{.Config.Site.BaseURL}}/favicon.svg">
-  <link rel="stylesheet" href="{{.Config.Site.BaseURL}}/assets/braised.css">
-  <script defer src="{{.Config.Site.BaseURL}}/assets/blocks.js"></script>
+  <link rel="stylesheet" href="{{.Config.Site.BaseURL}}/assets/braised.css?v={{.Assets.Version}}">
+  <script defer src="{{.Config.Site.BaseURL}}/assets/blocks.js?v={{.Assets.Version}}"></script>
   <script>
     (function() {
       var stored = localStorage.getItem('braised-theme');

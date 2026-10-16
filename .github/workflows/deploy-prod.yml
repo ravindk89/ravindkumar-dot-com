@@ -1,20 +1,24 @@
+name: Deploy production
+
+# Every merged PR is also a push to main, so push alone covers merges. (A
+# separate pull_request:closed trigger used to deploy merged PRs a second time.)
 on:
   push:
     branches: [main]
-  pull_request:
-    types: [closed]
+
+# Queue deploys instead of running two rsyncs against prod at once.
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    if: |
-      github.event_name == 'push' ||
-      (github.event_name == 'pull_request' && github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'deploy'))
     runs-on: ubuntu-latest
     environment: prod
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build site
         run: make build-prod
