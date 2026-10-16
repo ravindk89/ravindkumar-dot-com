@@ -1,4 +1,9 @@
-<a href="{{index .Props "href"}}" class="kcard{{if index .Props "active"}} kcard--active{{end}}">
+{{/* braised:description: A linked card with a kicker heading and a short description. Use inside kcards. */}}
+{{/* braised:parent: kcards */}}
+{{/* braised:prop: href type=url description="Card link target. Any link form: /page.md, braised:ref/id, or a full URL." */}}
+{{/* braised:prop: kicker type=string description="Short heading shown above the description." */}}
+{{/* braised:prop: active type=bool default="" description="Highlights the card when true." */}}
+<a href="{{index .Props "href"}}" class="kcard{{if eq (index .Props "active") "true"}} kcard--active{{end}}">
   <div class="kcard-line"></div>
   <div class="kcard-body">
     <span class="kcard-kicker">{{index .Props "kicker"}}</span>
