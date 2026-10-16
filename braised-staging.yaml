@@ -1,6 +1,6 @@
 site:
   title: Ravind Kumar
-  url: https://staging.ravindkumar.com
+  url: https://ravindkumar.com  # canonical → prod
   base_url: /staging/${BRAISED_BRANCH}
   description: Blog, portfolio, and showcase projects by Ravind Kumar
   meta:
