@@ -16,6 +16,10 @@ Kittens can have diarrhea, and the standard course of action was a cocktail of d
 But as time passed we found our boy had the impressive skill to take his meals and transform the wall near the litter box into a monochrome Jackson Pollock.
 Numerous vet visits built up, and we had our first taste of cruel math.
 
+:::{.image src="braised:static/talion-kitten-w.jpg" alt="Talion as a kitten, sitting on a grey couch with one paw raised" width="420px"}
+Talion, December 2015.
+:::
+
 I think I had a spreadsheet at one point estimating the costs of pet ownership.
 Average veterinary bills, the cost of decent food, litter, pet insurance. 
 I want to say I added in some overage at the beginning because life has a way of working outside of expectations.
@@ -30,6 +34,10 @@ Pets have it somewhat worse, as pet insurance may or may not have protections ar
 You can have more limited access to covered options and in many cases you have to pay up front first before requesting reimbursement.
 In our case having a kitten with a pre-existing condition exempted most of his now-normal tests, and candidly I felt it likely we would have been dropped after the first year either way.
 Altogether that original spreadsheet of costs went right out the window within months.
+
+:::{.image src="braised:static/talion-window.jpg" alt="Talion gazing out of the window, probably at a pidgeon" width="420px"}
+Talion, December 2015.
+:::
 
 Here in my hand I carry a little smote of light, warm and beautiful. 
 Here in my hand I carry the means to care for it with love and affection.
@@ -51,6 +59,10 @@ If this little light will cost me $10,000 today, what happens if some future lit
 Or do I let these lights go to save a bit for - what, exactly?
 In my heart I know it's because there will be more light in the future, and this world rarely lets you hold and grow them without spilling money.
 
+:::{.image src="braised:static/talion-scratcher.jpg" alt="Talion as an adult, lying sideways on a cardboard scratcher" width="560px"}
+Talion, October 2022.
+:::
+
 My house will soon be dimmer. 
 Will I regret not loading 20 or 30K onto the HELOC, spreading payments out over months in exchange for the maybe that my little light would persist for months or years?
 In my heart I know that if I had those funds easily available, if my hands had kept or built more wealth, I might have done so more readily.
@@ -65,6 +77,10 @@ I am sometimes thankful for the cruel math.
 Those same spreadsheets that so effectively split empathy from expense tell me that we can afford at-home euthenasia and a private cremation.
 I can hold some physical reminder of what was once light and reach back into memory to grasp what I once felt.
 What a relief that I can afford an inked imprint of his paw, and what misery that I had to ask whether I could.
+
+:::{.image src="braised:static/talion-hammock.jpg" alt="Talion lounging in a wall-mounted hammock, looking down at the camera" width="560px"}
+September 2024.
+:::
 
 The value of life is that it is finite, and in its close do those who persist remember this most sharply. 
 There is something I think a little bit broken in this world that we have to additionally measure the financial value, the literal dollars and cents that it costs to maintain life in its many shapes and waves.
@@ -86,7 +102,11 @@ I know that too is grief.
 It will sit with me forever, and I embrace this.
 Because his little light gave me so much joy that I can only grieve its passing.
 
-If there is a beyond that I find my way to, may we meet again my little light.
+:::{.image src="braised:static/talion-mug.jpg" alt="Ravind holding Talion and a mug that reads Not my circus, not my monkeys, in front of winged-cat wallpaper" width="420px"}
+December 2025.
+:::
+
+If there is a beyond that I find my way to, may we meet again my little light. 
 May it be a place where we never run the numbers on whether or not.
 May it be a place we simply sit with each other and watch a million other little lights.
 May it be a place where we simply shine.
