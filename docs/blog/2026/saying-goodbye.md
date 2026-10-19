@@ -1,9 +1,9 @@
 ---
 title: Saying Goodbye
-date: 2026-10-12
+date: 2026-10-19
 layout: blog
 hide_aside: true
-hero_eyebrow: The cruelty of simple math
+hero_eyebrow: The simple cruelty of math and life
 ---
 
 My wife and I brought home our first pet together in November of 2015.
@@ -40,9 +40,12 @@ Talion, December 2015.
 :::
 
 Here in my hand I carry a little smote of light, warm and beautiful. 
+
 Here in my hand I carry the means to care for it with love and affection.
+
 But my hand can carry only so much, and there is so much light and so few means.
-But this light I want to keep, all these lights I want to keep.
+
+And my greed demands I hold as much as I can of both, so I can hold not enough for not nearly long enough.
 
 11 years later I can likely tally the cost of this little light in the tens of thousands.
 And I am immensely grateful to have the fortune of some measure of wealth, whether one ascribes that to luck, skill, or divinity.
@@ -56,6 +59,7 @@ How many people have had to give up light in their life only because they could 
 
 What do I give up so that this little light will flourish?
 If this little light will cost me $10,000 today, what happens if some future little light needs another 10?
+
 Or do I let these lights go to save a bit for - what, exactly?
 In my heart I know it's because there will be more light in the future, and this world rarely lets you hold and grow them without spilling money.
 
@@ -85,29 +89,33 @@ September 2024.
 The value of life is that it is finite, and in its close do those who persist remember this most sharply. 
 There is something I think a little bit broken in this world that we have to additionally measure the financial value, the literal dollars and cents that it costs to maintain life in its many shapes and waves.
 I had a pastor once who said something to the effect of 'we are not in the Garden.'
-That feels the most apt when standing in a medical office looking at placards for financing options with 0% due for the first 6 months of the invoice for grief.
+That feels the most apt when standing in a medical office looking at placards for financing options with 0% due for the first 6 months of the invoice on sorrow.
 
 My mind went to employment and all the little things that an offer can entice you with.
 Fertility support, pet insurance, excellent medical coverage, life insurance, maybe even a gym benefit.
 So much of what light I can hold in my hand feels like it depends on who I work with, where their values towards their employees lie, or what a shareholder's balance sheet demands.
 In my heart I know that something about this is wrong and twisted, even more of our finite lives subordinated to the cruel math of an offer letter.
 
-Is it just that those with means are most able to cling to life?
-They are not immune to the closing of the circle, but certainly it seems like it's quite a bit easier to keep drawing when one's wallets are full and bank accounts overflowing.
+If I had more means, more fluid cash reserves or liquidity or literal dollar bills sitting under the matters, would the math have worked out in your favor little one?
+It seems like it's quite a bit easier to keep drawing lifelines when one's wallets are full and bank accounts overflowing.
 I am certainly bitter thinking back to selling MDB at just under half it's record high, because maybe that would be me today.
-Maybe I could have helped keep this beautiful little child's line going for just a little bit longer.
+Maybe I could have helped keep this beautiful little child's line going for just a little bit longer instead of having to run the numbers on a maybe.
 
-That too is grief.
-I know that too is grief.
-It will sit with me forever, and I embrace this.
-Because his little light gave me so much joy that I can only grieve its passing.
+Realistically having to put him through a complicated and uncertain surgery with unknown outcomes isn't for him.
+The logical math works against me, but my emotions scream out that there's room on the credit card to try.
+In the moment and after it, one works against the other mixing grief with guilt and certainty.
+Do I gamble on the odds of bringing him home, or does probability point to him passing away surrounded by strangers.
 
 :::{.image src="braised:static/talion-mug.jpg" alt="Ravind holding Talion and a mug that reads Not my circus, not my monkeys, in front of winged-cat wallpaper" width="420px"}
 December 2025.
 :::
 
-If there is a beyond that I find my way to, may we meet again my little light. 
-May it be a place where we never run the numbers on whether or not.
-May it be a place we simply sit with each other and watch a million other little lights.
-May it be a place where we simply shine.
+Tomorrow it will have been a week since we said goodbye.
+The passage of time is another cruel math, the simple movement of calendar days to mark the distance from my last memory of him spending a workday with me.
+We have to rebuild our version of normal around what is no longer here physically, even if it still occupies our heart and soul. 
+Each day that passes gets us a little closer to the new normal, and each day gets easier - but never easy. 
 
+I don't really know what comes after this, and the thought of it honestly sends me into a sheer panic.
+But whether it's darkness or some hereafter, either way we will end up in the same place.
+So it's only goodbye for now, for a little while and then never again.
+Until then, sleep well and in gentle peace.
