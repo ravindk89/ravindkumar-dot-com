@@ -1,5 +1,7 @@
 BRAISED_IMAGE ?= ghcr.io/ravindk89/braised
-BRAISED_TAG   ?= latest
+# Pinned braised release. Bump deliberately after checking the release notes;
+# override per run with `make build BRAISED_TAG=latest`.
+BRAISED_TAG   ?= v1.2
 BRAISED        = $(BRAISED_IMAGE):$(BRAISED_TAG)
 
 VALE_IMAGE ?= docker.io/jdkato/vale
