@@ -35,7 +35,7 @@ You can have more limited access to covered options and in many cases you have t
 In our case having a kitten with a pre-existing condition exempted most of his now-normal tests, and candidly I felt it likely we would have been dropped after the first year either way.
 Altogether that original spreadsheet of costs went right out the window within months.
 
-:::{.image src="braised:static/talion-window.jpg" alt="Talion gazing out of the window, probably at a pidgeon" width="420px"}
+:::{.image src="braised:static/talion-window.jpg" alt="Talion gazing out of the window, probably at a pigeon" width="420px"}
 Talion, December 2015.
 :::
 
@@ -78,7 +78,7 @@ I won't know one way or another, and none of us can know as Truth is beyond mort
 That is of no comfort to me, as in this moment I long terribly to Know.
 
 I am sometimes thankful for the cruel math.
-Those same spreadsheets that so effectively split empathy from expense tell me that we can afford at-home euthenasia and a private cremation.
+Those same spreadsheets that so effectively split empathy from expense tell me that we can afford at-home euthanasia and a private cremation.
 I can hold some physical reminder of what was once light and reach back into memory to grasp what I once felt.
 What a relief that I can afford an inked imprint of his paw, and what misery that I had to ask whether I could.
 

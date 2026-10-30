@@ -3,7 +3,7 @@ title: What you know about your hobby matters
 layout: essay
 hide_aside: true
 hero_eyebrow: The rewards from reading innumerable forum posts
-draft: true
+draft: false
 ---
 
 This one took me a while, mostly because I know what I want to write but not how I want to write it.
@@ -12,6 +12,7 @@ I'll start with defining exactly where 'esoteric' starts and ends.
 
 :::{.pull-quote attribution="merriam-webster.com/dictionary/esoteric" rag="include"}
 a : designed for or understood by the specially initiated alone
+
 b : requiring or exhibiting knowledge that is restricted to a small group
 :::
 
@@ -34,6 +35,10 @@ But it remains in my mind how much of this critical area of infrastructure was f
 Now I know people will say AI has solved for the problem because you can just ask your preferred frontier model of choice to do the work for you.
 BUT - and it's a big but - if you don't Know, you have no ability whatsoever to judge the quality of what that model has presented you.
 The gatekeepers of that esoteric knowledge remain, and what's changed is the availability of tooling that allows us to don the veneer of being in the club.
+
+:::{.pull-quote}
+BUT - and it's a big but - if you don't Know, you have no ability whatsoever to judge the quality of what that model has presented you.
+:::
 
 There's a positive spin to all this, and that's more where I want to take this.
 Previously I wrote that what you know about your product and your industry matters in this age of agentic offload.
@@ -81,7 +86,7 @@ The fiction writer can adapt their ability to weave stories and characters into 
 
 I'd encourage more people in traditionally non-technical fields to start thinking about their skillsets this way.
 Some of the best people I've worked with are sitting in roles that their backgrounds don't traditionally align with.
-Their ability to excell comes from adapting what they do know to highly technical roles and then learning the rest.
+Their ability to excel comes from adapting what they do know to highly technical roles and then learning the rest.
 
 Agents can't learn for us.
 They can facilitate the hoovering and summary of data for us to learn and build around.
@@ -95,9 +100,13 @@ And that last piece is where I think a lot of companies and organizations are ge
 If all you do is ask the agent to build something for you and give that output a fastball to publication, you're publishing hot AI slop and everyone knows it.
 They'll know it from the tone, voice, style, and construction of the thing you just shipped regardless of what form it takes.
 
+:::{.pull-quote}
+If all you do is ask the agent to build something for you and give that output a fastball to publication, you're publishing hot AI slop and everyone knows it.
+:::
+
 It might rub the wrong way for me to suggest that the employee who is an absolute expert at grilling might produce better content than an AI-driven content pipeline. 
 But it's the storytelling that matters when you're producing user facing content and I'd trust the ability of someone who knows their way around a perfectly cooked patty over a frontier model.
-And there's a happy medium-well burger in letting someone leverage their creative skills and esoteric knowledge alongisde agentic tooling to produce content that is truly tasty for the soul.
+And there's a happy medium-well burger in letting someone leverage their creative skills and esoteric knowledge alongside agentic tooling to produce content that is truly tasty for the soul.
 
 You can dismiss me as being overly poetic or emotional here but I honestly want you to scan the discourse around generative content of all kinds and see where the river is flowing.
 I really enjoy [Kelsey Hightower's](https://www.techtarget.com/news/Kelsey-Hightowers-advice-for-platform-engineers-as-AI-looms/857274/) perspective here.
@@ -113,7 +122,7 @@ It's the application of our amassed stores of knowledge and experience tasked to
 
 Your agents cannot really interact with people, understand the real world, or understand your customer base.
 They can utilize patterns, documentation, training materials, weights, and algorithms to produce a veneer of these three things.
-The danger is that they can present themselves as experts in the esoteric by sheer momentum of terrabytes and petabytes of data.
+The danger is that they can present themselves as experts in the esoteric by sheer momentum of terabytes and petabytes of data.
 
 When we trust that momentum with the heart of our products, the product itself suffers and degrades.
 We've all seen this in the shipping of features that arrive faster and break more quickly.
@@ -123,7 +132,7 @@ That means we now have to trust the agent that built the problem to solve the pr
 We play tricks using other agents with different weights and biases in the hope they'll catch what the main agent didn't. 
 That ultimately means surrendering our knowledge to cloud software that has no skin in the game when it comes to your product, your customers, or even your employees.
 
-There's an acronym in homebrewing - RDWHAHB, which stands for "Relax, Don't Worry, Have A HomeBrew".
+There's an acronym in homebrewing - RDWHAHB, which stands for "Relax, Don't Worry, Have A HomeBrew."
 And I think we need a version of that in AI-driven software development.
 Leadership teams over-worrying about being caught in the landslide of vibe-cloned software try to compete on velocity instead of quality.
 

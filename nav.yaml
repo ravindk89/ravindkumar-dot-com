@@ -24,6 +24,7 @@
         items:
           - Product Knowledge Matters: essays/what-you-know/product-knowledge-matters.md
           - Industry Knowledge Matters: essays/what-you-know/industry-knowledge-matters.md
+          - Esoteric Knowledge Matters: essays/what-you-know/esoteric-knowledge-matters.md
 
 - Projects:
   - Braised: projects/braised.md
