@@ -8,7 +8,7 @@ VALE_IMAGE ?= docker.io/jdkato/vale
 
 CONTAINER_CMD := $(shell command -v podman 2>/dev/null || command -v docker 2>/dev/null)
 
-.PHONY: build build-prod build-staging lint vale-sync
+.PHONY: build build-prod build-staging serve lint vale-sync
 
 build: build-prod
 
@@ -17,6 +17,12 @@ build-prod:
 
 build-staging:
 	$(CONTAINER_CMD) run --rm -e BRAISED_BRANCH -v $(PWD):/site $(BRAISED) build --config braised-staging.yaml
+
+# Local dev server with live reload at http://localhost:$(SERVE_PORT). Binds
+# 0.0.0.0 inside the container so the published port is reachable.
+SERVE_PORT ?= 4321
+serve:
+	$(CONTAINER_CMD) run --rm -it -p $(SERVE_PORT):4321 -v $(PWD):/site:z $(BRAISED) serve /site --host 0.0.0.0
 
 # Fetch Vale style packages (Google, etc.) into .vale/styles. Run once, or
 # whenever the Packages list in .vale.ini changes.

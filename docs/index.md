@@ -16,7 +16,13 @@ This site aims to correct that, among other things.
 
 ::::{.kcards}
 
-:::{.kcard kicker="What you know about your industry matters" href="/essays/what-you-know/industry-knowledge-matters/" active="true" }
+:::{.kcard kicker="What you know about the esoteric matters" href="/essays/what-you-know/esoteric-knowledge-matters/" active="true"}
+Part 3 of 3 in the "What you know" series.
+This one is a little bit more in-the-air, but my focus here is in the human aspect of building things.
+The more we let go of our unique knowledge and experience, the less good there is in what we build.
+:::
+
+:::{.kcard kicker="What you know about your industry matters" href="/essays/what-you-know/industry-knowledge-matters/" }
 Part 2 of 3 in the "What you know" series.
 The topic here is about how our knowledge of our industry (or industries) drives the critical-creative process, something AI can replicate in dangerous and misleading ways.
 :::
@@ -32,13 +38,5 @@ The reality is that these are probability machines where outputs vary even with 
 The line between skilled operator and future victim lies in recognizing this and using the tools appropriately.
 :::
 
-:::{.kcard kicker="Yet Another Static Site Generator" href="/projects/braised/"}
-BraiseDocs is a Proof-of-Concept around docs with out-of-the-box support for RAG pipelines and a process-level MCP for improved development.
-:::
-
-:::{.kcard kicker="Teaching Old Dogs New Tricks" href="/projects/postgres/"}
-I wanted to see what the PostGreSQL docs would look like in a slightly more contemporary rendering.
-More importantly, I wanted to use BraiseDocs to build a RAG + MCP server to see how it could benefit PGSQL development.
-:::
 
 ::::{/kcards}
